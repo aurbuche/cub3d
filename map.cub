@@ -1,0 +1,18 @@
+R 820 560
+
+NO ./textures/north.bmp
+SO ./textures/south.bmp
+WE ./textures/west.bmp
+EA ./textures/east.bmp
+
+S ./textures/sprite.bmp
+F 200,100,0
+C 255,255,255
+
+
+
+111111111
+100100001
+1200001
+1100N1
+111111
