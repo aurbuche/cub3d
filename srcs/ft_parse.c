@@ -6,7 +6,7 @@
 /*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 17:45:52 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/16 12:31:59 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/06/22 11:15:37 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,10 @@ int         ft_parse(char *line, t_cub *cub)
         free(line);
     }
     if ((!ft_complete_params(cub)))
+    {
         ft_disp_error("Missing args");
+        return (0);
+    }
     else
     {
         ft_printf("_____________________\n\n");

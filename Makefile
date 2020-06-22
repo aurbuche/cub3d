@@ -6,7 +6,7 @@
 #    By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/02 14:12:32 by tclaudel          #+#    #+#              #
-#    Updated: 2020/06/15 17:12:34 by aurelienbuc      ###   ########lyon.fr    #
+#    Updated: 2020/06/19 10:46:25 by aurelienbuc      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ YELLOW = \033[0;33m
 
 SRCS_NAME		=	cub3d.c ft_disp_error.c ft_check.c ft_init_cub.c r_converter.c ft_parse.c\
 					f_converter.c c_converter.c no_converter.c so_converter.c we_converter.c\
-					ea_converter.c s_converter.c ft_map_analyze.c ft_disp_ok.c
+					ea_converter.c s_converter.c ft_map_analyze.c ft_disp_map_ok.c ft_check_inside.c\
 
 SRC_PATH		=	srcs/
 

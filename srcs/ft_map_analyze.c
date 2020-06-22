@@ -6,7 +6,7 @@
 /*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:13:54 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/16 13:00:25 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/06/22 11:16:01 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,19 @@ int				ft_store_map(char *line, t_cub *cub)
 
 	i = 0;
 	j = -1;
-	cub->map = (char **)malloc(sizeof(char *) * cub->n_line);
+	cub->map = (char **)malloc(sizeof(char *) * cub->n_line + 1);
 	while (line[i])
 	{
 		k = 0;
 		j++;
-		cub->map[j] = (char *)malloc(sizeof(char) * ft_cchr(line, i, '~') - i);
+		cub->map[j] = (char *)malloc(sizeof(char) * (ft_cchr(line, i, '~') - i + 1));
 		while (line[i] && line[i] != '~')
 		{
 			cub->map[j][k] = line[i];
 			k++;
 			i++;
 		}
+		cub->map[j][k] = '\0';
 		if (i == ft_strlen(line))
 			break ;
 		i++;
@@ -59,8 +60,8 @@ int				ft_temporary(char *line, t_cub *cub)
 		}
 	}
 	tmp = ft_strfjoin(tmp, "~", 1);
-	if (ft_store_map(tmp, cub))
-		ft_disp_ok("MAP CHECKED IN");
+	if (!ft_store_map(tmp, cub))
+		return (0);
 	return (1);
 }
 
@@ -68,5 +69,8 @@ int	           ft_map_analyze(char *line, t_cub *cub)
 {
     if (!ft_temporary(line, cub))
 		return (0);
+	if (!ft_check_map(cub))
+		return (0);
+	ft_disp_map_ok(cub);
 	return (1);
 }

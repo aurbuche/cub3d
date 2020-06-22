@@ -6,7 +6,7 @@
 /*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/16 11:36:50 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/06/19 10:46:11 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ typedef struct          s_cub
 t_cub       	*ft_init_cub();
 int         	ft_check_cub(int ac, char **av, t_cub *cub);
 void        	ft_disp_error(char *str);
-void            ft_disp_ok(char *line);
+void            ft_disp_map_ok(t_cub *cub);
 int           	ft_parse(char *line, t_cub *cub);
 void        	f_converter(size_t i, char *line, t_cub *cub);
 void        	r_converter(size_t i, char *line, t_cub *cub);
@@ -58,5 +58,7 @@ void        	ea_converter(size_t i, char *line, t_cub *cub);
 void        	s_converter(size_t i, char *line, t_cub *cub);
 int    			ft_map_analyze(char *line, t_cub *cub);
 int 			ft_temporary(char *line, t_cub *cub);
+int				ft_check_map(t_cub *cub);
+int             ft_check_inside(t_cub *cub);
 
 #endif
