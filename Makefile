@@ -6,7 +6,7 @@
 #    By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/02 14:12:32 by tclaudel          #+#    #+#              #
-#    Updated: 2020/06/19 10:46:25 by aurelienbuc      ###   ########lyon.fr    #
+#    Updated: 2020/06/22 15:07:25 by aurelienbuc      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,9 +24,15 @@ GREY = \033[3;90m
 ORANGE = \033[3;91m
 YELLOW = \033[0;33m
 
-SRCS_NAME		=	cub3d.c ft_disp_error.c ft_check.c ft_init_cub.c r_converter.c ft_parse.c\
-					f_converter.c c_converter.c no_converter.c so_converter.c we_converter.c\
-					ea_converter.c s_converter.c ft_map_analyze.c ft_disp_map_ok.c ft_check_inside.c\
+SRCS_PARSING	= 	$(addprefix parsing/, ft_check.c ft_map_analyze.c\
+							ft_disp_map_ok.c ft_check_inside.c\
+							ft_disp_error.c ft_init_cub.c ft_parse.c)
+
+SRCS_CONVERT	=	$(addprefix convert/, f_converter.c c_converter.c\
+							no_converter.c so_converter.c we_converter.c\
+							ea_converter.c s_converter.c r_converter.c)
+
+SRCS_NAME		=	cub3d.c $(SRCS_PARSING) $(SRCS_CONVERT)
 
 SRC_PATH		=	srcs/
 
@@ -46,7 +52,7 @@ CC				=	cc
 
 RM				=	rm -rf
 
-FLAG			=	-Wall -g3 -fsanitize=address
+FLAG			=	-Wall -Werror -Wextra -g3 -fsanitize=address
 
 LIBFT			=	libft/libft.a
 
@@ -54,7 +60,7 @@ MINILIBX		=	minilibx/libmlx.a
 
 FRAMEWORK		=	-l mlx -framework OpenGL -framework AppKit -L minilibx -O3 -I minilibx
 
-all: $(OBJ_PATH) $(LIBFT) $(MINILIBX) $(NAME)
+all: $(OBJ_PATH) $(LIBFT) $(MINILIBX) $(NAME) 
 	@:
 
 $(LIBFT):
@@ -69,7 +75,7 @@ $(NAME): $(OBJ) $(HEADER)
 
 $(OBJ_PATH):
 	@mkdir -p obj/ 2> /dev/null
-	@mkdir -p obj/converters 2> /dev/null
+	@mkdir -p obj/convert 2> /dev/null
 	@mkdir -p obj/cub 2> /dev/null
 	@mkdir -p obj/parsing 2> /dev/null
 

@@ -6,7 +6,7 @@
 /*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/19 10:46:11 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/06/22 14:45:36 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
+// # include <mlx.h>
 # include <math.h>
 # include <stdbool.h>
 # include "../libft/include/libft.h"
@@ -27,7 +28,7 @@
 
 typedef struct          s_cub
 {
-    int			n_line;
+    size_t		n_line;
     int			fd;
 	int			c;
 	int			f;
