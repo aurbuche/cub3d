@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/02 14:12:32 by tclaudel          #+#    #+#              #
-#    Updated: 2020/07/07 21:26:50 by user42           ###   ########lyon.fr    #
+#    Updated: 2020/07/08 11:04:09 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ OBJ_PATH		=	obj/
 OBJ				=	$(addprefix $(OBJ_PATH), $(OBJ_NAME))
 
 NAME			=	cub3D
-`
+
 CC				=	cc
 
 RM				=	rm -rf
