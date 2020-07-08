@@ -63,6 +63,8 @@ int				ft_temporary(char *line, t_cub *cub)
 	tmp = ft_strfjoin(tmp, "~", 1);
 	if (!ft_store_map(tmp, cub))
 		return (0);
+	ft_delete(&tmp);
+	ft_delete(&line);
 	return (1);
 }
 

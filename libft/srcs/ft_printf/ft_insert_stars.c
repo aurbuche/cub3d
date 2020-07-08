@@ -14,9 +14,6 @@
 
 void			ft_insert_stars(char **fmt, size_t i, t_op *op, va_list ap)
 {
-	int		tmp;
-
-	tmp = 0;
 	while ((*fmt)[i])
 	{
 		if ((*fmt)[i] == '%' && !op->percent)

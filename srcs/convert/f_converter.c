@@ -38,4 +38,5 @@ void			f_converter(size_t i, char *line, t_cub *cub)
 		k++;
 	}
 	cub->f = 1;
+	ft_delete(&tmp);
 }

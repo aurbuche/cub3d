@@ -17,9 +17,7 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	char	*s3;
 	size_t	ls1;
 	size_t	ls2;
-	size_t	i;
 
-	i = 0;
 	if (!s1 || !s2)
 		return (NULL);
 	ls1 = ft_strlen(s1);

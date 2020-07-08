@@ -37,4 +37,5 @@ void				r_converter(size_t i, char *line, t_cub *cub)
 			i = ft_strlen(line);
 		k++;
 	}
+	ft_delete(&tmp);
 }
