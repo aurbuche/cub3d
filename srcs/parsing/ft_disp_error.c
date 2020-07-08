@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_disp_error.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/25 10:57:05 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/24 08:28:25 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/08 13:21:02 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

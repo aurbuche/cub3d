@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   we_converter.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 10:01:03 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/23 14:51:34 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/08 13:20:40 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

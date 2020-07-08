@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_inside.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/19 10:24:24 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/24 08:27:12 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/08 13:20:59 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
