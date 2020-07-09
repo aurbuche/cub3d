@@ -6,7 +6,7 @@
 #    By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/02 14:12:32 by tclaudel          #+#    #+#              #
-#    Updated: 2020/06/22 15:07:25 by aurelienbuc      ###   ########lyon.fr    #
+#    Updated: 2020/07/09 15:17:24 by aurelienbuc      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,8 @@ SRCS_PARSING	= 	$(addprefix parsing/, ft_check.c ft_map_analyze.c\
 SRCS_CONVERT	=	$(addprefix convert/, f_converter.c c_converter.c\
 							no_converter.c so_converter.c we_converter.c\
 							ea_converter.c s_converter.c r_converter.c)
+
+SRCS_DISPLAY	=	$(addprefix display/, ft_begin_disp.c)
 
 SRCS_NAME		=	cub3d.c $(SRCS_PARSING) $(SRCS_CONVERT)
 

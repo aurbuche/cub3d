@@ -6,7 +6,7 @@
 /*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/22 14:45:36 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/09 14:03:46 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,11 @@ typedef struct          s_cub
     char    	**map;
 }                       t_cub;
 
+typedef struct			s_data
+{
+	void		*mlx_ptr;
+	void		*mlx_win;
+}						t_data;
 
 t_cub       	*ft_init_cub();
 int         	ft_check_cub(int ac, char **av, t_cub *cub);

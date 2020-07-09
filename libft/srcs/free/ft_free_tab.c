@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_begin_disp.c                                    :+:      :+:    :+:   */
+/*   ft_free_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/22 15:10:49 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/09 14:04:40 by aurelienbuc      ###   ########lyon.fr   */
+/*   Created: 2020/07/07 19:14:23 by user42            #+#    #+#             */
+/*   Updated: 2020/07/09 15:36:13 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libcub3d.h"
+#include "../../include/libft.h"
 
-int			ft_begin_disp(t_cub *cub)
+char		**ft_free(char **tab)
 {
-	t_data			data;
+	int i;
 
-	if ((data.mlx_ptr = mlx_init()) == NULL)
-		return (EXIT_FAILURE);
-	if ((data.mlx_win = mlx_new_window(data.mlx_ptr, cub->res[0], cub->res[1], "Hello World")) == NULL)
-		return (EXIT_FAILURE);
-	mlx_loop(data.mlx_ptr);
-	return (EXIT_SUCCESS);
+	i = 0;
+	while (tab[i++])
+		free(tab[i]);
+	free(tab);
+	return (NULL);
 }

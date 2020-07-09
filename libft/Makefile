@@ -6,7 +6,7 @@
 #    By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/10 15:28:27 by aurbuche          #+#    #+#              #
-#    Updated: 2020/06/16 12:22:39 by aurelienbuc      ###   ########lyon.fr    #
+#    Updated: 2020/07/09 15:35:53 by aurelienbuc      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS_CONVERT	=	$(addprefix convert/, ft_atoi.c ft_itoa.c ft_itoa_base.c\
 SRCS_DISPLAY	=	$(addprefix display/, ft_putchar.c ft_putchar_fd.c\
 					ft_putendl_fd.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c)
 
-SRCS_FREE		=	$(addprefix free/, ft_delete.c)
+SRCS_FREE		=	$(addprefix free/, ft_delete.c ft_free_tab.c)
 
 SRCS_MEM		=	$(addprefix mem/, ft_bzero.c ft_memccpy.c ft_memchr.c\
 					ft_memcmp.c ft_memcpy.c\

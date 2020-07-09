@@ -6,7 +6,7 @@
 /*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 10:45:05 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/06/03 11:22:21 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/09 15:35:32 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,17 +51,6 @@ static int		ft_size(int i, const char *str, char c)
 		i++;
 	}
 	return (n);
-}
-
-static char		**ft_free(char **tab)
-{
-	int i;
-
-	i = 0;
-	while (tab[i++])
-		free(tab[i]);
-	free(tab);
-	return (NULL);
 }
 
 static char		**ft_crea_tab(const char *str, char **tab, char c, int i)

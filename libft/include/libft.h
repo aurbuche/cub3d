@@ -6,7 +6,7 @@
 /*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:27:42 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/06/08 20:47:30 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/09 15:36:21 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char	    *ft_strndup(const char *str, size_t n);
 char	    *strnfdup(char *str, int len);
 char	    *ft_strnjoin(char *s1, char const *s2, size_t len);
 char	    **ft_split(char const *s, char c);
+char		**ft_free(char **tab);
 void	    *ft_calloc(size_t count, size_t size);
 void	    ft_delete(char **ptr);
 void	    *ft_memset(void *b, int c, size_t len);
