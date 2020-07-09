@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 16:22:31 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/06/08 16:33:50 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/07 20:41:35 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

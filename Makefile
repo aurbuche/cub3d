@@ -3,10 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+         #
+#    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/02 14:12:32 by tclaudel          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2020/07/09 15:17:24 by aurelienbuc      ###   ########lyon.fr    #
+=======
+#    Updated: 2020/07/08 11:04:09 by user42           ###   ########lyon.fr    #
+>>>>>>> 500e73ffb67452834761764007e1def31743261b
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +46,7 @@ SRCS			=	$(addprefix $(SRC_PATH), $(SRCS_NAME))
 
 HEADER			=	includes/
 
-OBJ_NAME		=	${SRCS_NAME:.c=.o}
+OBJ_NAME		=	$(addprefix $(OBJ_PATH), ${SRCS_NAME:.c=.o}) libft/libft.a
 
 OBJ_PATH		=	obj/
 
@@ -54,7 +58,7 @@ CC				=	cc
 
 RM				=	rm -rf
 
-FLAG			=	-Wall -Werror -Wextra -g3 -fsanitize=address
+FLAG			=	-Wall -Werror -Wextra -g3 #-fsanitize=address
 
 LIBFT			=	libft/libft.a
 
@@ -62,7 +66,7 @@ MINILIBX		=	minilibx/libmlx.a
 
 FRAMEWORK		=	-l mlx -framework OpenGL -framework AppKit -L minilibx -O3 -I minilibx
 
-all: $(OBJ_PATH) $(LIBFT) $(MINILIBX) $(NAME) 
+all: $(LIBFT) $(OBJ_PATH) $(MINILIBX) $(NAME) 
 	@:
 
 $(LIBFT):
@@ -71,8 +75,8 @@ $(LIBFT):
 $(MINILIBX):
 	make -C minilibx/
 
-$(NAME): $(OBJ) $(HEADER)
-	@gcc $(FLAG) $(FRAMEWORK) $(LIBFT) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ_NAME) $(HEADER)
+	@gcc $(FLAG) $(LIBFT) $(OBJ_NAME) -o $(NAME)
 	@printf "	\033[2K\r$(DARK_BLUE)cube3D\t:\t$(LIGHT_GREEN)Updated\n\033[0m"
 
 $(OBJ_PATH):

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_map_analyze.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:13:54 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/24 08:22:55 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/08 13:20:15 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ int				ft_temporary(char *line, t_cub *cub)
 	tmp = ft_strfjoin(tmp, "~", 1);
 	if (!ft_store_map(tmp, cub))
 		return (0);
+	ft_delete(&tmp);
+	ft_delete(&line);
 	return (1);
 }
 

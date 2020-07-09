@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_disp_map_ok.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/15 17:08:39 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/24 08:22:46 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/08 13:21:04 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

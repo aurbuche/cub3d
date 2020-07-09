@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   f_converter.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 22:14:06 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/23 15:01:34 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/08 13:20:28 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,5 @@ void			f_converter(size_t i, char *line, t_cub *cub)
 		k++;
 	}
 	cub->f = 1;
+	ft_delete(&tmp);
 }

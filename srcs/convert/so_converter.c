@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_converter.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 11:07:30 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/23 14:52:11 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/08 13:20:38 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

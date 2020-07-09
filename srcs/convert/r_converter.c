@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   r_converter.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 17:59:45 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/06/23 14:58:28 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/08 13:20:35 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,5 @@ void				r_converter(size_t i, char *line, t_cub *cub)
 			i = ft_strlen(line);
 		k++;
 	}
+	ft_delete(&tmp);
 }

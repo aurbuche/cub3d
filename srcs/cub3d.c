@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:32:39 by aurelienbuc       #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2020/07/09 15:37:20 by aurelienbuc      ###   ########lyon.fr   */
+=======
+/*   Updated: 2020/07/08 13:44:58 by user42           ###   ########lyon.fr   */
+>>>>>>> 500e73ffb67452834761764007e1def31743261b
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +51,10 @@ int			main(int ac, char **av)
 
 	cub = ft_init_cub();
 	ft_start(ac, av, cub);
+<<<<<<< HEAD
 	// ft_begin_disp(cub);
+=======
+>>>>>>> 500e73ffb67452834761764007e1def31743261b
 	ft_free_cub(cub);
 	free(cub);
 }
