@@ -6,7 +6,7 @@
 /*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 09:25:11 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/15 09:25:13 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/15 09:45:31 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,7 @@ int			main(int ac, char **av)
 
 	cub = ft_init_cub();
 	ft_start(ac, av, cub);
-<<<<<<< HEAD
 	// ft_begin_disp(cub);
-=======
->>>>>>> 500e73ffb67452834761764007e1def31743261b
 	ft_free_cub(cub);
 	free(cub);
 }
