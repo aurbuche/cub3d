@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 10:45:05 by aurbuche          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2020/07/09 15:35:32 by aurelienbuc      ###   ########lyon.fr   */
-=======
-/*   Updated: 2020/07/07 20:13:42 by user42           ###   ########lyon.fr   */
->>>>>>> 500e73ffb67452834761764007e1def31743261b
+/*   Created: 2020/07/15 09:23:36 by aurelienbuc       #+#    #+#             */
+/*   Updated: 2020/07/15 09:23:38 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

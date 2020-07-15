@@ -3,16 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
+#    By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/10 15:28:27 by aurbuche          #+#    #+#              #
-<<<<<<< HEAD
-#    Updated: 2020/07/09 15:35:53 by aurelienbuc      ###   ########lyon.fr    #
-=======
-#    Updated: 2020/07/07 20:33:57 by user42           ###   ########lyon.fr    #
->>>>>>> 500e73ffb67452834761764007e1def31743261b
+#    Updated: 2020/07/15 09:22:28 by aurelienbuc      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
+
 
 SRCS_ALLOC		=	$(addprefix alloc/, ft_calloc.c ft_strdup.c ft_strndup.c\
 					ft_substr.c)

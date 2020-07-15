@@ -3,16 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
+#    By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/02 14:12:32 by tclaudel          #+#    #+#              #
-<<<<<<< HEAD
-#    Updated: 2020/07/09 15:17:24 by aurelienbuc      ###   ########lyon.fr    #
-=======
-#    Updated: 2020/07/08 11:04:09 by user42           ###   ########lyon.fr    #
->>>>>>> 500e73ffb67452834761764007e1def31743261b
+#    Updated: 2020/07/15 09:21:38 by aurelienbuc      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
+
 
 
 BLUE =\033[0;38;5;123m
