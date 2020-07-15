@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/23 13:32:39 by aurelienbuc       #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2020/07/09 15:37:20 by aurelienbuc      ###   ########lyon.fr   */
-=======
-/*   Updated: 2020/07/08 13:44:58 by user42           ###   ########lyon.fr   */
->>>>>>> 500e73ffb67452834761764007e1def31743261b
+/*   Created: 2020/07/15 09:25:11 by aurelienbuc       #+#    #+#             */
+/*   Updated: 2020/07/15 09:25:13 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
