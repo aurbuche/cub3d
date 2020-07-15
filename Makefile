@@ -35,46 +35,39 @@ SRCS_CONVERT	=	$(addprefix convert/, f_converter.c c_converter.c\
 
 SRCS_DISPLAY	=	$(addprefix display/, ft_begin_disp.c)
 
-SRCS_NAME		=	cub3d.c $(SRCS_PARSING) $(SRCS_CONVERT)
+SRCS_NAME		=	cub3d.c $(SRCS_PARSING) $(SRCS_CONVERT) $(SRCS_DISPLAY)
 
 SRC_PATH		=	srcs/
 
 SRCS			=	$(addprefix $(SRC_PATH), $(SRCS_NAME))
 
-HEADER			=	includes/
+LIBFT_PATH =	./libft
+MINILIBX_PATH =	./minilibx
+HEADERS =	includes/ft_cub3d.h
+OBJ =	$(SRC:.c=.o) libft/libft.a minilibx/libmlx.a
+NAME =	Cub3D
+CC =	gcc
+CFLAGS =	-Wall -Wextra -Werror -g3
+MLXFLAGS =	-lX11 -lXext -L minilibx/ -lmlx -lm -pthread -lbsd
+RM =	rm -f
 
-OBJ_NAME		=	$(addprefix $(OBJ_PATH), ${SRCS_NAME:.c=.o}) libft/libft.a
+all :	libft_all minilibx_all ${NAME}
 
-OBJ_PATH		=	obj/
+$(NAME) :	$(OBJ)
+				$(CC) $(CFLAGS) -o $@ $(OBJ) $(MLXFLAGS)
 
-OBJ				=	$(addprefix $(OBJ_PATH), $(OBJ_NAME))
+%.o :	%.c $(HEADERS)
+			@$(CC) $(CFLAGS) -o $@ -c $<
 
-NAME			=	cub3D
+libft_all :
+	@make -C $(LIBFT_PATH)
 
-CC				=	cc
+minilibx_all :
+	@make -C $(MINILIBX_PATH)
 
-RM				=	rm -rf
-
-FLAG			=	-Wall -Werror -Wextra -g3 #-fsanitize=address
-
-LIBFT			=	libft/libft.a
-
-MINILIBX		=	minilibx/libmlx.a
-
-FRAMEWORK		=	-l mlx -framework OpenGL -framework AppKit -L minilibx -O3 -I minilibx
-
-all: $(LIBFT) $(OBJ_PATH) $(MINILIBX) $(NAME) 
-	@:
-
-$(LIBFT):
-	@make -C libft/
-
-$(MINILIBX):
-	make -C minilibx/
-
-$(NAME): $(OBJ_NAME) $(HEADER)
-	@gcc $(FLAG) $(LIBFT) $(OBJ_NAME) -o $(NAME)
-	@printf "	\033[2K\r$(DARK_BLUE)cube3D\t:\t$(LIGHT_GREEN)Updated\n\033[0m"
+# $(NAME): $(OBJ_NAME) $(HEADER)
+# 	@gcc $(FLAG) $(LIBFT) $(OBJ_NAME) -o $(NAME)
+	# @printf "	\033[2K\r$(DARK_BLUE)cube3D\t:\t$(LIGHT_GREEN)Updated\n\033[0m"
 
 $(OBJ_PATH):
 	@mkdir -p obj/ 2> /dev/null
@@ -82,9 +75,9 @@ $(OBJ_PATH):
 	@mkdir -p obj/cub 2> /dev/null
 	@mkdir -p obj/parsing 2> /dev/null
 
-$(OBJ_PATH)%.o: $(SRC_PATH)%.c $(HEADER) Makefile
-	@printf "\033[2K\r$(LIGHT_RED)Compiling...	\033[37m$<\033[36m \033[0m"
-	@gcc $(FLAG) -I $(HEADER) -I minilibx -c $< -o $@
+# $(OBJ_PATH)%.o: $(SRC_PATH)%.c $(HEADER) Makefile
+# 	@printf "\033[2K\r$(LIGHT_RED)Compiling...	\033[37m$<\033[36m \033[0m"
+# 	@gcc $(FLAG) -I $(HEADER) -I minilibx -c $< -o $@
 
 clean:
 	@printf "\33[2K\r$(LIGHT_RED)Deleting cub3D srcs/	\033[37m"
@@ -109,6 +102,7 @@ clean:
 fclean: clean
 	@${RM} ${NAME}
 	@make -C libft/ fclean
+	@make -C minilibx/ fclean
 
 re: fclean all
 

@@ -20,7 +20,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
-# include <mlx.h>
+# include "../minilibx/mlx.h"
 # include <math.h>
 # include <stdbool.h>
 # include "../libft/include/libft.h"

@@ -22,7 +22,7 @@ static int			ft_complete_params(t_cub *cub)
 	return (i);
 }
 
-void				ft_convert(char *line, t_cub *cub)
+int				ft_convert(char *line, t_cub *cub)
 {
 	size_t		i;
 
@@ -47,6 +47,7 @@ void				ft_convert(char *line, t_cub *cub)
 			s_converter(i + 2, line, cub);
 		i++;
 	}
+	return (1);
 }
 
 int					ft_parse(char *line, t_cub *cub)
