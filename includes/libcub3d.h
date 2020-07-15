@@ -6,7 +6,7 @@
 /*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/09 14:03:46 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/09 19:48:52 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
-// # include <mlx.h>
+# include <mlx.h>
 # include <math.h>
 # include <stdbool.h>
 # include "../libft/include/libft.h"
