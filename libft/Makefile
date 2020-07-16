@@ -21,7 +21,8 @@ SRCS_CONVERT	=	$(addprefix convert/, ft_atoi.c ft_itoa.c ft_itoa_base.c\
 					ft_itoa_p_base.c)
 
 SRCS_DISPLAY	=	$(addprefix display/, ft_putchar.c ft_putchar_fd.c\
-					ft_putendl_fd.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c)
+					ft_putendl_fd.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c\
+					ft_putnbr.c ft_putendl.c)
 
 SRCS_FREE		=	$(addprefix free/, ft_delete.c ft_free_tab.c)
 

@@ -21,6 +21,7 @@
 # include <stdio.h>
 # include <string.h>
 # include "../minilibx/mlx.h"
+# include "../minilibx/mlx_int.h"
 # include <math.h>
 # include <stdbool.h>
 # include "../libft/include/libft.h"
@@ -66,5 +67,6 @@ int				ft_map_analyze(char *line, t_cub *cub);
 int				ft_temporary(char *line, t_cub *cub);
 int				ft_check_map(t_cub *cub);
 int				ft_check_inside(t_cub *cub);
+int				ft_begin_disp(t_cub *cub);
 
 #endif

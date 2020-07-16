@@ -47,7 +47,7 @@ int			main(int ac, char **av)
 
 	cub = ft_init_cub();
 	ft_start(ac, av, cub);
-	// ft_begin_disp(cub);
+	ft_begin_disp(cub);
 	ft_free_cub(cub);
 	free(cub);
 }
