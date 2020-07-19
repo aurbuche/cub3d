@@ -3,48 +3,63 @@
 /*                                                        :::      ::::::::   */
 /*   ft_begin_disp.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 15:10:49 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/15 09:21:15 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/18 14:27:03 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../../includes/libcub3d.h"
 
-int			deal_key(int key)
+int			unused_key(int key, t_data *data)
 {
-	ft_putnbr(key);
+	if (key == K_ESCAPE)
+		ft_close(data);
+	if (key == K_W)
+		data->move =  0;
+	else if (key == K_S)
+		data->move = 0;
+	else if (key == K_A)
+		data->move = 0;
+	else if (key == K_D)
+		data->move = 0;
+	else if (key == K_SPACE)
+		data->move = 0;
+	return (1);
+}
+
+int			use_key(int key, t_data *data)
+{
+	if (key == K_ESCAPE)
+		ft_close(data);
+	if (key == K_W)
+		data->move = 'w';
+	else if (key == K_S)
+		data->move = 's';
+	else if (key == K_A)
+		data->move = 'a';
+	else if (key == K_D)
+		data->move = 'd';
+	else if (key == K_SPACE)
+		data->move = ' ';
 	return (1);
 }
 
 int			ft_begin_disp(t_cub *cub)
 {
-	t_data		data;
-	// int			x;
-	// int			y;
-	// int			color;
+	t_data		*data;
 
-	// x = 0;
-	// color = 0xffffff;
-	if ((data.mlx_ptr = mlx_init()) == NULL)
+	// ft_start_player_pos(cub);
+	data = ft_init_data();
+	if ((data->mlx_ptr = mlx_init()) == NULL)
 		return (EXIT_FAILURE);
-	if ((data.mlx_win = mlx_new_window(data.mlx_ptr, cub->res[0], cub->res[1], "Hello World")) == NULL)
+	if ((data->mlx_win = mlx_new_window(data->mlx_ptr, cub->res[0], cub->res[1], "Hello World")) == NULL)
 		return (EXIT_FAILURE);
-	// while (x < cub->res[0])
-	// {
-	// 	y = 0;
-	// 	while (y < cub->res[1])
-	// 	{
-	// 		mlx_pixel_put(data.mlx_ptr, data.mlx_win, x, y, color);
-	// 		y++;
-	// 	}
-	// 	x++;
-	// }
-	mlx_key_hook(data.mlx_win, deal_key, (void *)0);
-	mlx_loop(data.mlx_ptr);
+	mlx_key_hook(data->mlx_win, &use_key, data);
+	mlx_key_hook(data->mlx_ptr, &unused_key, data);
+	mlx_loop(data->mlx_ptr);
 	return (EXIT_SUCCESS);
-	// // if (())
 	return (1);
 }

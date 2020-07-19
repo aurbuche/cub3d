@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libcub3d.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/15 09:10:22 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/07/18 13:43:54 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,22 @@
 # include "../minilibx/mlx_int.h"
 # include <math.h>
 # include <stdbool.h>
+# include "key.h"
 # include "../libft/include/libft.h"
 # include "../libft/include/libftprintf.h"
+
+
+typedef	struct 			s_pos
+{
+	int		x;
+	int		y;
+}						t_pos;
+
+typedef struct			s_dir
+{
+	int		x;
+	int		y;
+}						t_dir;
 
 typedef struct          s_cub
 {
@@ -36,18 +50,22 @@ typedef struct          s_cub
 	int			f_color[3];
 	int			c_color[3];
 	int			res[2];
+	char		ori;
 	char		*no;
 	char		*so;
 	char		*we;
 	char		*ea;
 	char		*s;
 	char		**map;
+	t_pos		pos;
+	t_dir		dir;
 }                       t_cub;
 
 typedef struct			s_data
 {
 	void		*mlx_ptr;
 	void		*mlx_win;
+	char		move;
 }						t_data;
 
 t_cub			*ft_init_cub();
@@ -68,5 +86,8 @@ int				ft_temporary(char *line, t_cub *cub);
 int				ft_check_map(t_cub *cub);
 int				ft_check_inside(t_cub *cub);
 int				ft_begin_disp(t_cub *cub);
+int				ft_close(t_data *data);
+t_data			*ft_init_data();
+void			ft_start_player_pos(char c, t_cub *cub, size_t x, size_t y);
 
 #endif
