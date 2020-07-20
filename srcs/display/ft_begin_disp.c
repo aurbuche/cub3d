@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 15:10:49 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/18 14:27:03 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/07/20 09:51:27 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int			ft_begin_disp(t_cub *cub)
 {
 	t_data		*data;
 
-	// ft_start_player_pos(cub);
+	ft_dir(cub);
 	data = ft_init_data();
 	if ((data->mlx_ptr = mlx_init()) == NULL)
 		return (EXIT_FAILURE);

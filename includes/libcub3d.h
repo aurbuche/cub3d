@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/18 13:43:54 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/07/20 09:55:01 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,22 @@
 # include "../libft/include/libft.h"
 # include "../libft/include/libftprintf.h"
 
+typedef struct 			s_plane
+{
+	double		x;
+	double		y;
+}						t_plane;
 
 typedef	struct 			s_pos
 {
-	int		x;
-	int		y;
+	double		x;
+	double		y;
 }						t_pos;
 
 typedef struct			s_dir
 {
-	int		x;
-	int		y;
+	double		x;
+	double		y;
 }						t_dir;
 
 typedef struct          s_cub
@@ -59,6 +64,7 @@ typedef struct          s_cub
 	char		**map;
 	t_pos		pos;
 	t_dir		dir;
+	t_plane		plane;
 }                       t_cub;
 
 typedef struct			s_data
@@ -89,5 +95,6 @@ int				ft_begin_disp(t_cub *cub);
 int				ft_close(t_data *data);
 t_data			*ft_init_data();
 void			ft_start_player_pos(char c, t_cub *cub, size_t x, size_t y);
+void			ft_dir(t_cub *cub);
 
 #endif
