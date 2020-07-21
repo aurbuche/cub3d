@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 11:53:21 by user42            #+#    #+#             */
-/*   Updated: 2020/07/20 11:12:26 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/07/21 09:37:15 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,44 @@
 
 void		ft_plane(t_cub *cub)
 {
-	cub->plane.x = 0;
-	cub->plane.y = 0.66;
+	if (cub->ori == 'N')
+	{
+		cub->plane.x = 0;
+		cub->plane.y = -((double)FOV / (double)100);
+	}
+	if (cub->ori == 'S')
+	{
+		cub->plane.x = 0;
+		cub->plane.y = ((double)FOV / (double)100);
+	}
+	if (cub->ori == 'E')
+	{
+		cub->plane.x = ((double)FOV / (double)100);
+		cub->plane.y = 0;
+	}
+	if (cub->ori == 'W')
+	{
+		cub->plane.x = -((double)FOV / (double)100);
+		cub->plane.y = 0;
+	}
 }
 
 void		ft_dir(t_cub *cub)
 {
-	if (cub->ori == 'E')
+	if (cub->ori == 'N')
 	{
-		cub->dir.x = 0;
-		cub->dir.y = 1;
+		cub->dir.x = -1;
+		cub->dir.y = 0;
 	}
 	if (cub->ori == 'S')
 	{
 		cub->dir.x = 1;
 		cub->dir.y = 0;
 	}
-	if (cub->ori == 'N')
+	if (cub->ori == 'E')
 	{
-		cub->dir.x = -1;
-		cub->dir.y = 0;
+		cub->dir.x = 0;
+		cub->dir.y = 1;
 	}
 	if (cub->ori == 'W')
 	{

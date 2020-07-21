@@ -6,12 +6,16 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/20 09:55:01 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/07/21 18:58:21 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
+# define FOV 66
+# define RENDERDIST 10
+# define MOVESPEED 0.075
+# define ROTSPEED 0.04
 
 # include <sys/types.h>
 # include <sys/stat.h>
@@ -27,6 +31,17 @@
 # include "key.h"
 # include "../libft/include/libft.h"
 # include "../libft/include/libftprintf.h"
+
+// typedef struct			s_img
+// {
+// 	void		*img;
+// 	int			width;
+// 	int			height;
+// 	int			*img_data;
+// 	int			bpp;
+// 	int			size_line;
+// 	int			endian;
+// }						t_img;
 
 typedef struct 			s_plane
 {
@@ -45,6 +60,13 @@ typedef struct			s_dir
 	double		x;
 	double		y;
 }						t_dir;
+
+typedef struct			s_data
+{
+	float		d;
+	float		h;
+}						t_data;
+
 
 typedef struct          s_cub
 {
@@ -65,14 +87,15 @@ typedef struct          s_cub
 	t_pos		pos;
 	t_dir		dir;
 	t_plane		plane;
-}                       t_cub;
-
-typedef struct			s_data
-{
 	void		*mlx_ptr;
 	void		*mlx_win;
 	char		move;
-}						t_data;
+	char		turn;
+	t_img		screen;
+	t_data		wall;
+	t_data		ceil;
+	t_data		floor;
+}                       t_cub;
 
 t_cub			*ft_init_cub();
 int				ft_check_cub(int ac, char **av, t_cub *cub);
@@ -92,9 +115,10 @@ int				ft_temporary(char *line, t_cub *cub);
 int				ft_check_map(t_cub *cub);
 int				ft_check_inside(t_cub *cub);
 int				ft_begin_disp(t_cub *cub);
-int				ft_close(t_data *data);
-t_data			*ft_init_data();
+int				ft_close(t_cub *cub);
+// t_data			*ft_init_data();
 void			ft_start_player_pos(char c, t_cub *cub, size_t x, size_t y);
 void			ft_dir(t_cub *cub);
+// int         	ft_loop(t_cub *cub);
 
 #endif

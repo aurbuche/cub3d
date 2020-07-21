@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_close.c                                         :+:      :+:    :+:   */
+/*   ft_draw.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/17 15:22:25 by user42            #+#    #+#             */
-/*   Updated: 2020/07/21 13:28:47 by user42           ###   ########lyon.fr   */
+/*   Created: 2020/07/21 16:22:46 by user42            #+#    #+#             */
+/*   Updated: 2020/07/21 16:28:02 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
 
-int         ft_close(t_cub *cub)
+void            ft_draw_wall(t_cub *cub)
 {
-    mlx_destroy_window(cub->mlx_ptr, cub->mlx_win);
-    exit(1);
+    
 }
