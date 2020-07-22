@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 15:10:49 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/21 16:28:06 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/07/22 14:58:04 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,14 @@ int			ft_begin_disp(t_cub *cub)
 	if ((cub->mlx_ptr = mlx_init()) == NULL)
 		return (EXIT_FAILURE);
 	/***/
+	// if (!(cub->screen.img = mlx_new_image(cub->mlx_ptr, cub->res[0], cub->res[1])))
+	// 	return (EXIT_FAILURE);
 	if ((cub->mlx_win = mlx_new_window(cub->mlx_ptr, cub->res[0], cub->res[1], "Hello World")) == NULL)
 		return (EXIT_FAILURE);
 	/***/
 	mlx_key_hook(cub->mlx_win, &use_key, cub);
-	mlx_key_hook(cub->mlx_ptr, &unused_key, cub);
-	// mlx_loop_hook(cub->mlx_ptr, ft_loop, cub);
+	mlx_key_hook(cub->mlx_win, &unused_key, cub);
+	mlx_loop_hook(cub->mlx_ptr, &cub_loop, cub);
 	mlx_loop(cub->mlx_ptr);
 	return (EXIT_SUCCESS);
 	return (1);

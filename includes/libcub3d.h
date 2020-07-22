@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/21 18:58:21 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/07/22 14:06:10 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,16 @@
 # include "../libft/include/libft.h"
 # include "../libft/include/libftprintf.h"
 
-// typedef struct			s_img
-// {
-// 	void		*img;
-// 	int			width;
-// 	int			height;
-// 	int			*img_data;
-// 	int			bpp;
-// 	int			size_line;
-// 	int			endian;
-// }						t_img;
+typedef struct			s_im
+{
+	void		*img;
+	int			width;
+	int			height;
+	int			*img_data;
+	int			bpp;
+	int			size_line;
+	int			endian;
+}						t_im;
 
 typedef struct 			s_plane
 {
@@ -91,7 +91,7 @@ typedef struct          s_cub
 	void		*mlx_win;
 	char		move;
 	char		turn;
-	t_img		screen;
+	t_im		screen;
 	t_data		wall;
 	t_data		ceil;
 	t_data		floor;
@@ -119,6 +119,7 @@ int				ft_close(t_cub *cub);
 // t_data			*ft_init_data();
 void			ft_start_player_pos(char c, t_cub *cub, size_t x, size_t y);
 void			ft_dir(t_cub *cub);
-// int         	ft_loop(t_cub *cub);
+int         	cub_loop(t_cub *cub);
+void			ft_move(t_cub *cub);
 
 #endif
