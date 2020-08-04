@@ -6,13 +6,13 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 16:22:46 by user42            #+#    #+#             */
-/*   Updated: 2020/07/24 10:29:54 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/04 10:54:28 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
 
-void            ft_draw_ceiling(t_cub *c)
+void            ft_draw_ceil_floor(t_cub *c)
 {
     int			i;
 	int			j;
@@ -41,7 +41,7 @@ void            ft_draw_ceiling(t_cub *c)
 
 void			ft_draw(t_cub *cub)
 {
-	ft_draw_ceiling(cub);
+	ft_draw_ceil_floor(cub);
 	// cub->screen.img = mlx_new_image(cub->mlx_ptr, cub->res[0], cub->res[1]);
 
 }

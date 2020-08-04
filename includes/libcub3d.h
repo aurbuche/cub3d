@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/24 10:32:01 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/04 10:55:22 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,7 +134,7 @@ void			ft_start_player_pos(char c, t_cub *cub, size_t x, size_t y);
 void			ft_dir(t_cub *cub);
 int         	cub_loop(t_cub *cub);
 // void			ft_move(t_cub *cub);
-void            ft_draw_ceiling(t_cub *cub);
+void            ft_draw_ceil_floor(t_cub *cub);
 void			ft_colors(t_cub *cub, char *line);
 void            ft_raycasting(t_cub *cub);
 
