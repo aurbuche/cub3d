@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 15:10:49 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/22 14:58:04 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/07/24 09:49:34 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 int			unused_key(int key, t_cub *cub)
 {
-	if (key == K_ESCAPE)
-		ft_close(cub);
 	if (key == K_W)
 		cub->move =  0;
 	else if (key == K_S)
@@ -57,8 +55,9 @@ int			ft_begin_disp(t_cub *cub)
 	if ((cub->mlx_win = mlx_new_window(cub->mlx_ptr, cub->res[0], cub->res[1], "Hello World")) == NULL)
 		return (EXIT_FAILURE);
 	/***/
-	mlx_key_hook(cub->mlx_win, &use_key, cub);
-	mlx_key_hook(cub->mlx_win, &unused_key, cub);
+	// ft_draw_ceiling(cub);
+	mlx_hook(cub->mlx_win, 2, 1L << 0, &use_key, cub);
+	mlx_hook(cub->mlx_win, 3, 1l << 1, &unused_key, cub);
 	mlx_loop_hook(cub->mlx_ptr, &cub_loop, cub);
 	mlx_loop(cub->mlx_ptr);
 	return (EXIT_SUCCESS);

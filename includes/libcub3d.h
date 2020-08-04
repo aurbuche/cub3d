@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/22 14:06:10 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/07/24 10:32:01 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,12 @@ typedef struct			s_data
 	float		h;
 }						t_data;
 
+typedef struct			s_color
+{
+	int			color;
+	char		argb[4];
+}						t_color;
+
 
 typedef struct          s_cub
 {
@@ -77,6 +83,9 @@ typedef struct          s_cub
 	int			f_color[3];
 	int			c_color[3];
 	int			res[2];
+	int			*img_data;
+	int			x;
+	int			end;
 	char		ori;
 	char		*no;
 	char		*so;
@@ -95,6 +104,8 @@ typedef struct          s_cub
 	t_data		wall;
 	t_data		ceil;
 	t_data		floor;
+	int			color_ceiling;
+	int			color_floor;
 }                       t_cub;
 
 t_cub			*ft_init_cub();
@@ -114,12 +125,17 @@ int				ft_map_analyze(char *line, t_cub *cub);
 int				ft_temporary(char *line, t_cub *cub);
 int				ft_check_map(t_cub *cub);
 int				ft_check_inside(t_cub *cub);
+
+
 int				ft_begin_disp(t_cub *cub);
 int				ft_close(t_cub *cub);
 // t_data			*ft_init_data();
 void			ft_start_player_pos(char c, t_cub *cub, size_t x, size_t y);
 void			ft_dir(t_cub *cub);
 int         	cub_loop(t_cub *cub);
-void			ft_move(t_cub *cub);
+// void			ft_move(t_cub *cub);
+void            ft_draw_ceiling(t_cub *cub);
+void			ft_colors(t_cub *cub, char *line);
+void            ft_raycasting(t_cub *cub);
 
 #endif
