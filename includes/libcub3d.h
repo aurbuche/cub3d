@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libcub3d.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/08/04 10:55:22 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/06 10:11:52 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,7 @@ typedef struct          s_cub
 	t_data		floor;
 	int			color_ceiling;
 	int			color_floor;
+	int			end;
 }                       t_cub;
 
 t_cub			*ft_init_cub();

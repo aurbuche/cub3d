@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_init_cub.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 17:03:57 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/21 13:50:14 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/06 10:12:11 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ t_cub		*ft_init_cub(void)
 	cub->move = 0;
 	cub->turn = 0;
 	cub->ori = 0;
+	cub->end = 0;
 	cub->no = NULL;
 	cub->so = NULL;
 	cub->we = NULL;
