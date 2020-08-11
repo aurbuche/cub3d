@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_begin_disp.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 15:10:49 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/24 09:49:34 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/04 17:31:46 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,17 +49,11 @@ int			ft_begin_disp(t_cub *cub)
 {
 	if ((cub->mlx_ptr = mlx_init()) == NULL)
 		return (EXIT_FAILURE);
-	/***/
-	// if (!(cub->screen.img = mlx_new_image(cub->mlx_ptr, cub->res[0], cub->res[1])))
-	// 	return (EXIT_FAILURE);
-	if ((cub->mlx_win = mlx_new_window(cub->mlx_ptr, cub->res[0], cub->res[1], "Hello World")) == NULL)
-		return (EXIT_FAILURE);
-	/***/
-	// ft_draw_ceiling(cub);
+	ft_dir(cub);
+	ft_start_window(cub);
 	mlx_hook(cub->mlx_win, 2, 1L << 0, &use_key, cub);
 	mlx_hook(cub->mlx_win, 3, 1l << 1, &unused_key, cub);
 	mlx_loop_hook(cub->mlx_ptr, &cub_loop, cub);
 	mlx_loop(cub->mlx_ptr);
-	return (EXIT_SUCCESS);
 	return (1);
 }

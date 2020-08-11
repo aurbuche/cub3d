@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_parse.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 17:45:52 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/09 20:05:07 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/08/11 11:41:51 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

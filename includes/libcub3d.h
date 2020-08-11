@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/08/04 10:55:22 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/11 09:08:53 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,7 @@ typedef struct          s_cub
 	t_data		floor;
 	int			color_ceiling;
 	int			color_floor;
+	t_im		text[5];
 }                       t_cub;
 
 t_cub			*ft_init_cub();
@@ -133,9 +134,13 @@ int				ft_close(t_cub *cub);
 void			ft_start_player_pos(char c, t_cub *cub, size_t x, size_t y);
 void			ft_dir(t_cub *cub);
 int         	cub_loop(t_cub *cub);
-// void			ft_move(t_cub *cub);
+void			ft_move(t_cub *cub);
 void            ft_draw_ceil_floor(t_cub *cub);
 void			ft_colors(t_cub *cub, char *line);
 void            ft_raycasting(t_cub *cub);
+int				ft_start_window(t_cub *cub);
+void			ft_textures(t_cub *cub);
+void			ft_dir(t_cub *cub);
+void			ft_start_player_pos(char c, t_cub *cub, size_t x, size_t y);
 
 #endif

@@ -1,11 +1,11 @@
 R 820 560
 
-NO ./textures/colorstone.bmp
-SO ./textures/south.bmp
-WE ./textures/bluestone.bmp
-EA ./textures/oak_planks.bmp
+NO ./textures/N.xpm
+SO ./textures/S.xpm
+WE ./textures/W.xpm
+EA ./textures/E.xpm
 
-S ./textures/sprite.bmp
+S ./textures/ruby.xpm
 F 200,100,0
 C 255,255,255
 

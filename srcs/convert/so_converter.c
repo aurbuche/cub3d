@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 11:07:30 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/08 13:20:38 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/11 11:24:33 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void			so_converter(size_t i, char *line, t_cub *cub)
 	j = i;
 	while (line[i] && line[i] != '\n')
 		i++;
-	cub->so = ft_strndup(line + j, i - 1);
+	cub->so = ft_strndup(line + j, i);
 }

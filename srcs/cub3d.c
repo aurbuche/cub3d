@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 09:25:11 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/15 09:45:31 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/08/11 11:42:44 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ void		ft_free_cub(t_cub *cub)
 		free(cub->map[i]);
 		i++;
 	}
-	ft_delete(&cub->ea);
 	ft_delete(&cub->no);
 	ft_delete(&cub->so);
+	ft_delete(&cub->ea);
 	ft_delete(&cub->we);
 	ft_delete(&cub->s);
 }

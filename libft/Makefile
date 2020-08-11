@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+         #
+#    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/10 15:28:27 by aurbuche          #+#    #+#              #
-#    Updated: 2020/07/15 09:22:28 by aurelienbuc      ###   ########lyon.fr    #
+#    Updated: 2020/08/10 17:12:31 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ SRCS_STR		=	$(addprefix str/, ft_split.c ft_strchr.c ft_strcpy.c\
 					ft_strfjoin.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c\
 					ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c\
 					ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_strcat.c\
-					ft_strlcopy.c)
+					ft_strlcopy.c ft_strtok.c)
 
 SRCS_READ		=	$(addprefix read/, get_next_line.c)
 
