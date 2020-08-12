@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 13:47:43 by user42            #+#    #+#             */
-/*   Updated: 2020/08/10 12:00:45 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/12 09:44:27 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int			cub_loop(t_cub *cub)
 {
-    // dprintf(1, "%c", cub->move);
-    // ft_draw_ceiling(cub);
+    // dprintf(1, "LA");
+    ft_draw_ceil_floor(cub);
     if (cub->move)
         ft_move(cub);
     // if (cub->turn)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 09:23:36 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/15 09:23:38 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/08/12 09:22:57 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static char		**ft_crea_tab(const char *str, char **tab, char c, int i)
 		while (str[i] == c)
 			i++;
 		if (!(tab[j] = (char*)malloc(sizeof(char) * (ft_size(i, str, c) + 1))))
-			return (ft_free(tab));
+			return (ft_free_tab(tab));
 		v = i;
 		while (i < (v + ft_size(v, str, c)))
 			tab[j][l++] = str[i++];
