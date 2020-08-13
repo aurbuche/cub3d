@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/08/12 11:50:27 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/13 10:53:39 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ typedef struct			s_data
 typedef union
 {
 	int			color;
-	int			argb[4];
+	char		argb[4];
 }						t_color;
 
 

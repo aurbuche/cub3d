@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:27:42 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/08/10 17:38:47 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/13 09:57:21 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
+void			ft_reset_tab(int *tab, int end);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlen(const char *str);

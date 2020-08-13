@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 16:22:46 by user42            #+#    #+#             */
-/*   Updated: 2020/08/12 11:01:54 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/13 11:08:02 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void            ft_draw_ceil_floor(t_cub *c)
 
 	j = -1;
 	c->x = -1;
-	// while (++j < c->res[0] / 2)
-	// {
-	// 	i = -1;
-	// 	dprintf(1, "%d", c->color_ceiling);
-	// 	while (++i < c->res[1])
-	// 		c->img_data[j * c->res[0] + i] = c->color_ceiling;
-	// }
+	while (++j < c->res[0] / 2)
+	{
+		i = -1;
+		// dprintf(1, "%d", c->color_ceiling);
+		while (++i < c->res[1])
+			c->img_data[j * c->res[0] + i] = c->color_ceiling;
+	}
 	while (j < c->res[0])
 	{
 		i = -1;
@@ -33,7 +33,7 @@ void            ft_draw_ceil_floor(t_cub *c)
 			c->img_data[j * c->res[1] + i] = c->color_floor;
 	}
 	// mlx_put_image_to_window(c->mlx_ptr, c->mlx_win, c->i)
-}
+} 
 
 // void            ft_draw_wall(t_cub *cub)
 // {

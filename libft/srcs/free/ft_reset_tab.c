@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_loop.c                                          :+:      :+:    :+:   */
+/*   ft_reset_tab.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/21 13:47:43 by user42            #+#    #+#             */
-/*   Updated: 2020/08/13 09:27:58 by user42           ###   ########lyon.fr   */
+/*   Created: 2020/08/13 09:54:33 by user42            #+#    #+#             */
+/*   Updated: 2020/08/13 09:57:41 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libcub3d.h"
+#include "../../include/libft.h"
 
-int			cub_loop(t_cub *cub)
+void        ft_reset_tab(int *tab, int end)
 {
-    // dprintf(1, "LA");
-    if (cub->move)
-        ft_move(cub);
-    ft_draw_ceil_floor(cub);
-    // if (cub->turn)
-    //     ft_turn(cub);
-    // if (!cub->end)
-    //     ft_raycasting(cub);
-    mlx_put_image_to_window(cub->mlx_ptr, cub->mlx_win, cub->screen.img, 0, 0);
-	return (1);
+	int     i;
+
+	i = 0;
+	while (i < end)
+	{
+		tab[i] = 0;
+		i++;
+	}
 }

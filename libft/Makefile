@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/10 15:28:27 by aurbuche          #+#    #+#              #
-#    Updated: 2020/08/10 17:12:31 by user42           ###   ########lyon.fr    #
+#    Updated: 2020/08/13 09:57:59 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRCS_DISPLAY	=	$(addprefix display/, ft_putchar.c ft_putchar_fd.c\
 					ft_putendl_fd.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c\
 					ft_putnbr.c ft_putendl.c)
 
-SRCS_FREE		=	$(addprefix free/, ft_delete.c ft_free_tab.c)
+SRCS_FREE		=	$(addprefix free/, ft_delete.c ft_free_tab.c ft_reset_tab.c)
 
 SRCS_MEM		=	$(addprefix mem/, ft_bzero.c ft_memccpy.c ft_memchr.c\
 					ft_memcmp.c ft_memcpy.c\
