@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/08/13 10:53:39 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/18 16:33:17 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,34 +43,16 @@ typedef struct			s_im
 	int			endian;
 }						t_im;
 
-typedef struct 			s_plane
+typedef struct 			s_vect
 {
 	double		x;
 	double		y;
-}						t_plane;
-
-typedef	struct 			s_pos
-{
-	double		x;
-	double		y;
-}						t_pos;
-
-typedef struct			s_dir
-{
-	double		x;
-	double		y;
-}						t_dir;
-
-typedef struct			s_data
-{
-	float		d;
-	float		h;
-}						t_data;
+}						t_vect;
 
 typedef union
 {
-	int			color;
-	char		argb[4];
+	int				color;
+	char			argb[3];
 }						t_color;
 
 
@@ -80,33 +62,30 @@ typedef struct          s_cub
 	int			fd;
 	int			c;
 	int			f;
-	int			f_color[3];
-	int			c_color[3];
 	int			res[2];
-	int			*img_data;
-	int			x;
 	int			end;
 	char		ori;
+	char		*f_color[3];
+	char		*c_color[3];
 	char		*no;
 	char		*so;
 	char		*we;
 	char		*ea;
 	char		*s;
 	char		**map;
-	t_pos		pos;
-	t_dir		dir;
-	t_plane		plane;
 	void		*mlx_ptr;
 	void		*mlx_win;
 	char		move;
 	char		turn;
-	t_im		screen;
-	t_data		wall;
-	t_data		ceil;
-	t_data		floor;
 	int			color_ceiling;
 	int			color_floor;
+	t_im		screen;
 	t_im		text[5];
+	t_vect		pos;
+	t_vect		dir;
+	t_vect		plane;
+	t_vect		maps;
+	t_vect		ray_dir;
 }                       t_cub;
 
 t_cub			*ft_init_cub();

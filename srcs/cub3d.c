@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 09:25:11 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/08/11 11:42:44 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/18 15:56:24 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,5 @@ int			main(int ac, char **av)
 	ft_begin_disp(cub);
 	ft_free_cub(cub);
 	free(cub);
+	return (0);
 }

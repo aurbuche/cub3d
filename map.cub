@@ -1,4 +1,4 @@
-R 820 560
+R 320 200
 
 NO ./textures/N.xpm
 SO ./textures/S.xpm
@@ -6,8 +6,8 @@ WE ./textures/W.xpm
 EA ./textures/E.xpm
 
 S ./textures/ruby.xpm
-F 178,100,0
-C 154,134,43
+F 8,151,12
+C 0,50,253
 
 111111111  111
 100100001111011

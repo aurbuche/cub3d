@@ -6,13 +6,13 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 22:14:06 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/24 09:30:26 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/18 09:53:02 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
 
-void			f_converter(size_t i, char *line, t_cub *cub)
+void				f_converter(size_t i, char *line, t_cub *cub)
 {
 	char	*tmp;
 	int		j;
@@ -31,13 +31,13 @@ void			f_converter(size_t i, char *line, t_cub *cub)
 				i++;
 			tmp = ft_strndup(line + j, i - 1);
 		}
-		cub->f_color[k] = ft_atoi(tmp);
+		cub->f_color[k] = tmp;
 		i++;
 		if (i >= ft_strlen(line))
 			i = ft_strlen(line);
 		k++;
 	}
-	ft_colors(cub,line);
+	ft_colors(cub, line);
 	cub->f = 1;
 	ft_delete(&tmp);
 }

@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/02 14:12:32 by tclaudel          #+#    #+#              #
-#    Updated: 2020/08/13 09:00:02 by user42           ###   ########lyon.fr    #
+#    Updated: 2020/08/18 15:19:02 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRCS_CONVERT	=	$(addprefix convert/, f_converter.c c_converter.c\
 
 SRCS_DISPLAY	=	$(addprefix display/, ft_begin_disp.c ft_close.c\
 							ft_loop.c ft_move.c ft_draw.c ft_textures.c\
-							ft_colors.c ft_start_windows.c ft_player.c)# ft_raycasting.c)
+							ft_colors.c ft_start_windows.c ft_player.c ft_raycasting.c)
 
 SRCS_NAME		=	cub3d.c $(SRCS_PARSING) $(SRCS_CONVERT) $(SRCS_DISPLAY)
 

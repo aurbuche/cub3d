@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:13:54 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/18 13:45:07 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/18 16:01:16 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int				ft_store_map(char *line, t_cub *cub)
 		while (line[i] && line[i] != '~')
 		{
 			if (ft_strchr("NSEW", line[i]))
-				ft_start_player_pos(line[i], cub, j, k);
+				ft_start_player_pos(line[i], cub, k, j);
 			cub->map[j][k] = line[i];
 			k++;
 			i++;

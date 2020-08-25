@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 22:46:05 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/08/13 08:59:07 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/08/18 09:53:06 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void				c_converter(size_t i, char *line, t_cub *cub)
 				i++;
 			tmp = ft_strndup(line + j, i - 1);
 		}
-		cub->c_color[k] = ft_atoi(tmp);
+		cub->c_color[k] = tmp;
 		i++;
 		if (i >= ft_strlen(line))
 			i = ft_strlen(line);
