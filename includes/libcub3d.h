@@ -79,6 +79,8 @@ typedef struct          s_cub
 	char		turn;
 	int			color_ceiling;
 	int			color_floor;
+	int			ishit;
+	double		camerax;
 	t_im		screen;
 	t_im		text[5];
 	t_vect		pos;
@@ -86,6 +88,9 @@ typedef struct          s_cub
 	t_vect		plane;
 	t_vect		maps;
 	t_vect		ray_dir;
+	t_vect		side_dist;
+	t_vect		delta_dist;
+	t_vect		ray_dist;
 }                       t_cub;
 
 t_cub			*ft_init_cub();

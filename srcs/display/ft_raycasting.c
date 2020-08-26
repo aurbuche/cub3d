@@ -14,8 +14,22 @@
 
 static void			ft_search_wall(t_cub *cub)
 {
-	cub->maps.x = cub->pos.x;
-	cub->maps.y = cub->pos.y;
+	cub->maps.x = (int)cub->pos.x;
+	cub->maps.y = (int)cub->pos.y;
+	cub->delta_dist.x = fabs(1 /cub->ray_dist.x);
+	cub->delta_dist.y = fabs(1 /cub->ray_dist.y);
+	cub->ishit = 0;
+}
+
+static void			DDA(t_cub *cub)
+{
+	while(!cub->ishit)
+	{
+		if (cub->side_dist.x < cub->side_dist.y)
+		{
+			cub->side_dist.x += cub->delta_dist.x;
+		}
+	}
 }
 
 void				ft_raycasting(t_cub *cub)
@@ -23,8 +37,8 @@ void				ft_raycasting(t_cub *cub)
 	int		x;
 
 	x = 0;
-	printf("%f/%f\n", cub->maps.x, cub->maps.y);
-	printf("%d/%d", cub->res[0], cub->res[1]);
+	// printf("%f/%f\n", cub->maps.x, cub->maps.y);
+	// printf("%d/%d", cub->res[0], cub->res[1]);
 	while (x < cub->res[0])
 	{
 		ft_search_wall(cub);

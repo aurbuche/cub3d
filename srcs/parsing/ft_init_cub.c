@@ -49,6 +49,7 @@ t_cub		*ft_init_cub(void)
 	cub->turn = 0;
 	cub->ori = 0;
 	cub->end = 0;
+	cub->ishit = 0;
 	cub->no = NULL;
 	cub->so = NULL;
 	cub->ea = NULL;
