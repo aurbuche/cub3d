@@ -24,10 +24,29 @@ static void			setup(t_cub *c, int x)
 	c->ishit = 0;
 }
 
-// static void			ft_search_wall(t_c *c)
-// {
-
-// }
+static void			ft_search_wall(t_cub *c)
+{
+	if (c->dir_ray.x < 0)
+	{
+		c->step.x = -1;
+		c->side_dist.x = (c->pos.x - c->maps.x) * c->delta_dist.x;
+	}
+	else
+	{
+		c->step.x = 1;
+		c->side_dist.x = (c->maps.x +1.0 - c->pos.x) * c->delta_dist.x;
+	}
+	if (c->dir_ray.y < 0)
+	{
+		c->step.y = -1;
+		c->side_dist.y = (c->pos.y - c->maps.y) * c->delta_dist.y;
+	}
+	else
+	{
+		c->step.y = 1;
+		c->side_dist.y = (c->maps.y +1.0 - c->pos.y) * c->delta_dist.y;
+	}
+}
 
 static void			DDA(t_cub *c)
 {
@@ -61,9 +80,10 @@ void				ft_raycasting(t_cub *c)
 	{
 		setup(c, x);
 		DDA(c);
-		// ft_search_wall(c);
+		ft_search_wall(c);
 		x++;
 	}
+
 }
 
 

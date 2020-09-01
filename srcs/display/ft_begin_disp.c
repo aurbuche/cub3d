@@ -30,6 +30,7 @@ int			unused_key(int key, t_cub *cub)
 
 int			use_key(int key, t_cub *cub)
 {
+	ft_printf("|LA");
 	if (key == K_ESCAPE)
 		ft_close(cub);
 	if (key == K_W)
@@ -51,9 +52,8 @@ int			ft_begin_disp(t_cub *cub)
 		return (EXIT_FAILURE);
 	ft_dir(cub);
 	ft_start_window(cub);
-	ft_printf("LA");
-	mlx_hook(cub->mlx_win, 2, 1L << 0, &use_key, cub);
-	mlx_hook(cub->mlx_win, 3, 1l << 1, &unused_key, cub);
+	mlx_hook(cub->mlx_win, 02, 1L << 0, &use_key, cub);
+	mlx_hook(cub->mlx_win, 03, 1L << 1, &unused_key, cub);
 	mlx_loop_hook(cub->mlx_ptr, &cub_loop, cub);
 	mlx_loop(cub->mlx_ptr);
 	return (1);
