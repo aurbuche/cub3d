@@ -43,6 +43,13 @@ typedef struct			s_im
 	int			endian;
 }						t_im;
 
+typedef struct			s_pos
+{
+	int			x;
+	int			y;
+}						t_pos;
+
+
 typedef struct 			s_vect
 {
 	double		x;
@@ -80,17 +87,19 @@ typedef struct          s_cub
 	int			color_ceiling;
 	int			color_floor;
 	int			ishit;
+	int			side;
 	double		camerax;
 	t_im		screen;
 	t_im		text[5];
-	t_vect		pos;
 	t_vect		dir;
 	t_vect		plane;
-	t_vect		maps;
-	t_vect		ray_dir;
+	t_vect		dir_ray;
 	t_vect		side_dist;
 	t_vect		delta_dist;
 	t_vect		ray_dist;
+	t_vect		pos;
+	t_pos		step;
+	t_pos		maps;
 }                       t_cub;
 
 t_cub			*ft_init_cub();

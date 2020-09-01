@@ -15,8 +15,8 @@
 int			cub_loop(t_cub *cub)
 {
     // dprintf(1, "LA");
-    // if (cub->move)
-    //     ft_move(cub);
+    if (cub->move)
+        ft_move(cub);
     // ft_draw_ceil_floor(cub);
     // if (cub->turn)
     //     ft_turn(cub);

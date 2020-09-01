@@ -12,36 +12,56 @@
 
 #include "../../includes/libcub3d.h"
 
-static void			ft_search_wall(t_cub *cub)
+static void			setup(t_cub *c, int x)
 {
-	cub->maps.x = (int)cub->pos.x;
-	cub->maps.y = (int)cub->pos.y;
-	cub->delta_dist.x = fabs(1 /cub->ray_dist.x);
-	cub->delta_dist.y = fabs(1 /cub->ray_dist.y);
-	cub->ishit = 0;
+	c->camerax = 2 * x / (double)c->res[0] - 1;
+	c->dir_ray.x = c->dir.x + c->plane.x * c->camerax;
+	c->dir_ray.y = c->dir.y + c->plane.y * c->camerax;
+	c->maps.x = (int)c->pos.x;
+	c->maps.y = (int)c->pos.y;
+	c->delta_dist.x = fabs(1 /c->ray_dist.x);
+	c->delta_dist.y = fabs(1 /c->ray_dist.y);
+	c->ishit = 0;
 }
 
-static void			DDA(t_cub *cub)
+// static void			ft_search_wall(t_c *c)
+// {
+
+// }
+
+static void			DDA(t_cub *c)
 {
-	while(!cub->ishit)
+	while(!c->ishit)
 	{
-		if (cub->side_dist.x < cub->side_dist.y)
+		if (c->side_dist.x < c->side_dist.y)
 		{
-			cub->side_dist.x += cub->delta_dist.x;
+			c->side_dist.x += c->delta_dist.x;
+			c->maps.x += c->step.x;
+			c->side = 0;
 		}
+		else
+		{
+			c->side_dist.y += c->delta_dist.y;
+			c->maps.y += c->step.y;
+			c->side = 1;
+		}
+		if (c->map[c->maps.x][c->maps.y] == '1')
+			c->ishit = 1;
 	}
 }
 
-void				ft_raycasting(t_cub *cub)
+void				ft_raycasting(t_cub *c)
 {
 	int		x;
 
 	x = 0;
-	// printf("%f/%f\n", cub->maps.x, cub->maps.y);
-	// printf("%d/%d", cub->res[0], cub->res[1]);
-	while (x < cub->res[0])
+	// printf("%f/%f\n", c->maps.x, c->maps.y);
+	// printf("%d/%d", c->res[0], c->res[1]);
+	while (x < c->res[0])
 	{
-		ft_search_wall(cub);
+		setup(c, x);
+		DDA(c);
+		// ft_search_wall(c);
 		x++;
 	}
 }
