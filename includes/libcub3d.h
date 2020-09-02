@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/08/18 16:33:17 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/02 16:14:26 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,10 @@ typedef struct          s_cub
 	int			side;
 	int			x;
 	int			*data;
+	int			line_height;
+	int			start_draw;
+	int			end_draw;
+	double		wall_dist;
 	double		camerax;
 	t_im		screen;
 	t_im		text[5];
@@ -137,6 +141,6 @@ void            ft_raycasting(t_cub *cub);
 int				ft_start_window(t_cub *cub);
 void			ft_textures(t_cub *cub);
 void			ft_dir(t_cub *cub);
-void			ft_start_player_pos(char c, t_cub *cub, size_t x, size_t y);
+void			ft_data(t_cub *cub);
 
 #endif

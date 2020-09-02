@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 10:30:00 by user42            #+#    #+#             */
-/*   Updated: 2020/08/18 16:49:19 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/02 15:53:39 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void				ft_raycasting(t_cub *c)
 		ft_setup(c, x);
 		ft_search_wall(c);
 		DDA(c);
-		ft_(c);
+		ft_data(c);
 		x++;
 	}
 
