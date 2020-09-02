@@ -12,7 +12,7 @@
 
 #include "../../includes/libcub3d.h"
 
-static void			setup(t_cub *c, int x)
+static void			ft_setup(t_cub *c, int x)
 {
 	c->camerax = 2 * x / (double)c->res[0] - 1;
 	c->dir_ray.x = c->dir.x + c->plane.x * c->camerax;
@@ -78,9 +78,10 @@ void				ft_raycasting(t_cub *c)
 	// printf("%d/%d", c->res[0], c->res[1]);
 	while (x < c->res[0])
 	{
-		setup(c, x);
-		DDA(c);
+		ft_setup(c, x);
 		ft_search_wall(c);
+		DDA(c);
+		ft_(c);
 		x++;
 	}
 

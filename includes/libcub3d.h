@@ -88,6 +88,8 @@ typedef struct          s_cub
 	int			color_floor;
 	int			ishit;
 	int			side;
+	int			x;
+	int			*data;
 	double		camerax;
 	t_im		screen;
 	t_im		text[5];
@@ -129,6 +131,7 @@ void			ft_dir(t_cub *cub);
 int         	cub_loop(t_cub *cub);
 void			ft_move(t_cub *cub);
 void            ft_draw_ceil_floor(t_cub *cub);
+void			ft_draw(t_cub *cub);
 void			ft_colors(t_cub *cub, char *line);
 void            ft_raycasting(t_cub *cub);
 int				ft_start_window(t_cub *cub);
