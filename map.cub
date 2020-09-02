@@ -6,8 +6,8 @@ WE ./textures/W.xpm
 EA ./textures/E.xpm
 
 S ./textures/ruby.xpm
-F 8,151,12
-C 0,50,253
+F 138,43,226
+C 255,215,0
 
 111111111  111
 100100001111011

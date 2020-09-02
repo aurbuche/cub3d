@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 10:30:00 by user42            #+#    #+#             */
-/*   Updated: 2020/09/02 15:53:39 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/02 21:24:36 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ static void			ft_setup(t_cub *c, int x)
 	c->dir_ray.y = c->dir.y + c->plane.y * c->camerax;
 	c->maps.x = (int)c->pos.x;
 	c->maps.y = (int)c->pos.y;
-	c->delta_dist.x = fabs(1 /c->ray_dist.x);
-	c->delta_dist.y = fabs(1 /c->ray_dist.y);
+	c->delta_dist.x = fabs(1 / c->dir_ray.x);
+	c->delta_dist.y = fabs(1 / c->dir_ray.y);
 	c->ishit = 0;
 }
 
@@ -82,6 +82,8 @@ void				ft_raycasting(t_cub *c)
 		ft_search_wall(c);
 		DDA(c);
 		ft_data(c);
+		ft_apply_textures(c);
+		ft_draw(c, x);
 		x++;
 	}
 

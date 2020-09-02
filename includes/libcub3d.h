@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/02 16:14:26 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/02 21:37:41 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,8 +93,14 @@ typedef struct          s_cub
 	int			line_height;
 	int			start_draw;
 	int			end_draw;
+	int			tex_x;
+	int			tex_y;
 	double		wall_dist;
 	double		camerax;
+	double		tex_pos;
+	double		tex_step;
+	int			tex_num;
+	double		*zbuffer;
 	t_im		screen;
 	t_im		text[5];
 	t_vect		dir;
@@ -104,6 +110,7 @@ typedef struct          s_cub
 	t_vect		delta_dist;
 	t_vect		ray_dist;
 	t_vect		pos;
+	t_vect		wall;
 	t_pos		step;
 	t_pos		maps;
 }                       t_cub;
@@ -135,10 +142,11 @@ void			ft_dir(t_cub *cub);
 int         	cub_loop(t_cub *cub);
 void			ft_move(t_cub *cub);
 void            ft_draw_ceil_floor(t_cub *cub);
-void			ft_draw(t_cub *cub);
+void			ft_draw(t_cub *cub, int x);
 void			ft_colors(t_cub *cub, char *line);
 void            ft_raycasting(t_cub *cub);
 int				ft_start_window(t_cub *cub);
+void			ft_apply_textures(t_cub *c);
 void			ft_textures(t_cub *cub);
 void			ft_dir(t_cub *cub);
 void			ft_data(t_cub *cub);
