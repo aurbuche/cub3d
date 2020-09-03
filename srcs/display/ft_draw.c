@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 16:22:46 by user42            #+#    #+#             */
-/*   Updated: 2020/09/02 22:06:25 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/03 10:11:23 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void		ft_draw_wall(t_cub *c, int x)
 	int			i;
 	size_t		dist;
 	t_color		color;
-	double		darker;
+	// double		darker;
 
 	i = c->start_draw;
 	while (i < c->end_draw)
@@ -27,14 +27,14 @@ static void		ft_draw_wall(t_cub *c, int x)
 		c->tex_pos += c->tex_step;
 		color.color = c->text[c->tex_num].img_data
 				[c->tex_y * c->text[c->tex_num].width + c->tex_x];
-		darker = c->wall_dist > RENDERDIST ?
-				0 : 1 - (c->wall_dist / RENDERDIST);
-		color.argb[0] *= darker;
-		color.argb[1] *= darker;
-		color.argb[2] *= darker;
+		// darker = c->wall_dist > RENDERDIST ?
+		// 		0 : 1 - (c->wall_dist / RENDERDIST);
+		// color.argb[0] *= darker;
+		// color.argb[1] *= darker;
+		// color.argb[2] *= darker;
 		c->screen.img_data[i * c->res[0] + x] = color.color;
-		ft_printf("%d", c->wall_dist);
-		c->zbuffer[x] = c->wall_dist;
+		// ft_printf("%d", x);
+		// c->zbuffer[x] = (double)c->wall_dist;
 		i++;
 	}
 }
@@ -76,9 +76,9 @@ static	void	ft_draw_ceil(t_cub *c, int k)
 
 void			ft_draw(t_cub *cub, int x)
 {
-	ft_draw_wall(cub, x);
 	ft_draw_floor(cub, x);
     ft_draw_ceil(cub, x);
+	ft_draw_wall(cub, x);
     // ft_draw_ceil_floor(cub);
 	// cub->screen.img = mlx_new_image(cub->mlx_ptr, cub->res[0], cub->res[1]);
 
