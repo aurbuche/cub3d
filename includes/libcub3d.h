@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/03 09:41:01 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/04 12:24:37 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,5 +150,6 @@ void			ft_apply_textures(t_cub *c);
 void			ft_textures(t_cub *cub);
 void			ft_dir(t_cub *cub);
 void			ft_data(t_cub *cub);
+void			ft_turn(t_cub *c);
 
 #endif

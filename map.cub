@@ -1,6 +1,6 @@
 R 1000 650
 
-NO ./textures/N.xpm
+NO ./textures/eagle.xpm
 SO ./textures/S.xpm
 WE ./textures/W.xpm
 EA ./textures/E.xpm

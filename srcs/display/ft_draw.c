@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 16:22:46 by user42            #+#    #+#             */
-/*   Updated: 2020/09/03 10:11:23 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/04 15:47:02 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,18 @@ static void		ft_draw_floor(t_cub *c, int x)
 {
 	t_color		color;
 	int			y;
-	int			dist;
-	double		darker;
+	// int			dist;
+	// double		darker;
 
 	y = c->res[1] - 1;
 	color.color = c->color_floor;
 	while (y >= c->end_draw && y > 0)
 	{
-		dist = (y - c->res[1] / 2);
-		darker = dist < RENDERDIST * 5 ? (double)dist / (RENDERDIST * 5) : 1.0;
-		color.argb[0] *= darker;
-		color.argb[1] *= darker;
-		color.argb[2] *= darker;
+		// dist = (y - c->res[1] / 2);
+		// darker = dist < RENDERDIST * 5 ? (double)dist / (RENDERDIST * 5) : 1.0;
+		// color.argb[0] *= darker;
+		// color.argb[1] *= darker;
+		// color.argb[2] *= darker;
 		c->screen.img_data[y * c->res[0] + x] = color.color;
 		y--;
 	}

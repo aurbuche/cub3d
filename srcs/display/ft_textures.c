@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/04 16:42:56 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/03 09:41:16 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/04 14:55:32 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_load_noso_text(t_cub *c)
 	if ((c->text[0].img = mlx_xpm_file_to_image(c->mlx_ptr, c->no, &c->text[0].width, &c->text[0].height)))
 		c->text[0].img_data = (int *)mlx_get_data_addr(c->text[0].img, &c->text[0].bpp, &c->text[0].size_line, &c->text[0].endian);
 	else
-		dprintf(1, "prout");
+		exit(1);
 	if ((c->text[1].img = mlx_xpm_file_to_image(c->mlx_ptr, c->so, &c->text[1].width, &c->text[1].height)))
 		c->text[1].img_data = (int *)mlx_get_data_addr(c->text[1].img, &c->text[1].bpp, &c->text[1].size_line, &c->text[1].endian);
 	else
@@ -46,7 +46,7 @@ void        ft_textures(t_cub *c)
 
 void		ft_apply_textures(t_cub *c)
 {
-	if (c->side == 0)
+	if (c->side)
 		c->tex_num = c->dir_ray.x < 0 ? 1 : 0;
 	else
 		c->tex_num = c->dir_ray.y < 0 ? 2 : 3;
