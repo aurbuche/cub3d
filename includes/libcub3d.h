@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/04 12:24:37 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/06 18:11:54 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define CUB3D_H
 # define FOV 66
 # define RENDERDIST 10
-# define MOVESPEED 0.075
+# define MOVESPEED 0.050
 # define ROTSPEED 0.04
 
 # include <sys/types.h>

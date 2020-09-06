@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/04 16:42:56 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/04 14:55:32 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/06 18:10:53 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void        ft_textures(t_cub *c)
 
 void		ft_apply_textures(t_cub *c)
 {
-	if (c->side)
+	if (!c->side)
 		c->tex_num = c->dir_ray.x < 0 ? 1 : 0;
 	else
 		c->tex_num = c->dir_ray.y < 0 ? 2 : 3;
