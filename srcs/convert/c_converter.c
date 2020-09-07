@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 22:46:05 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/07 14:36:01 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/07 20:12:39 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ void				c_converter(size_t i, char *line, t_cub *cub)
 	int		k;
 
 	k = 0;
+	if (cub->color_ceiling)
+		ft_disp_error("Ceiling color already exist.", cub);
+	ft_printf("%d\n", cub->color_ceiling);
 	while (line[i])
 	{
 		j = 0;
@@ -31,7 +34,7 @@ void				c_converter(size_t i, char *line, t_cub *cub)
 				i++;
 			tmp = ft_strndup(line + j, i - 1);
 		}
-		cub->c_color[k] = tmp;
+		cub->c_color[k] = ft_strdup(tmp);
 		i++;
 		if (i >= ft_strlen(line))
 			i = ft_strlen(line);
@@ -39,5 +42,6 @@ void				c_converter(size_t i, char *line, t_cub *cub)
 		ft_delete(&tmp);
 	}
 	ft_colors(cub, line);
+	ft_printf("%d\n", cub->color_ceiling);
 	cub->c = 1;
 }

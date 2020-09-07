@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/02 17:51:18 by user42            #+#    #+#              #
-#    Updated: 2020/09/07 13:49:16 by user42           ###   ########lyon.fr    #
+#    Updated: 2020/09/07 17:08:04 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ YELLOW = \033[0;33m
 
 SRCS_PARSING	= 	$(addprefix parsing/, ft_check.c ft_map_analyze.c\
 							ft_disp_map_ok.c ft_check_inside.c\
-							ft_disp_error.c ft_init_cub.c ft_parse.c)
+							ft_disp_error.c ft_init_cub.c ft_parse.c\
+							ft_print_params.c)
 
 SRCS_CONVERT	=	$(addprefix convert/, f_converter.c c_converter.c\
 							no_converter.c so_converter.c we_converter.c\
@@ -49,7 +50,7 @@ OBJ				=	$(SRCS:.c=.o) libft/libft.a minilibx/libmlx.a
 OBJ_PATH		=	obj/
 NAME			=	Cub3D
 CC				=	gcc
-CFLAGS			=	-Wall -Wextra -Werror -g3 -fsanitize=address
+CFLAGS			=	-Wall -Wextra -Werror -g3 #-fsanitize=address
 MLXFLAGS		=	-lX11 -lXext -L minilibx/ -lmlx -lm -pthread -lbsd
 RM				=	rm -f
 

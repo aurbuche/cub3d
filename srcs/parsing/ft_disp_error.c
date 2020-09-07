@@ -6,15 +6,17 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/25 10:57:05 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/08 13:21:02 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/07 16:17:00 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
 
-void		ft_disp_error(char *str)
+void		ft_disp_error(char *str, t_cub *c)
 {
 	ft_putstr("\033[0;31m");
 	ft_printf("Error : %s\n", str);
 	ft_putstr("\033[0m");
+	ft_free_cub(c);
+	exit(1);
 }

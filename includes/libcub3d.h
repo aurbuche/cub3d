@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/07 13:29:58 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/07 17:03:46 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,9 +117,10 @@ typedef struct          s_cub
 
 t_cub			*ft_init_cub();
 int				ft_check_cub(int ac, char **av, t_cub *cub);
-void			ft_disp_error(char *str);
+void			ft_disp_error(char *str, t_cub *cub);
 void			ft_disp_map_ok(t_cub *cub);
 int				ft_parse(char *line, t_cub *cub);
+void			ft_print_params(t_cub *cub);
 void			f_converter(size_t i, char *line, t_cub *cub);
 void			r_converter(size_t i, char *line, t_cub *cub);
 void			c_converter(size_t i, char *line, t_cub *cub);

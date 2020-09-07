@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   s_converter.c                                      :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/09 10:01:01 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/07 16:54:24 by user42           ###   ########lyon.fr   */
+/*   Created: 2020/09/07 17:00:11 by user42            #+#    #+#             */
+/*   Updated: 2020/09/07 17:04:17 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
 
-void				s_converter(size_t i, char *line, t_cub *cub)
+void        ft_print_params(t_cub *c)
 {
-	int			j;
-
-	j = 0;
-	if (cub->s)
-		ft_disp_error("Cub->s a deja une valeur", cub);
-	while (line[i] == ' ')
-		i++;
-	j = i;
-	while (line[i] && line[i] != '\n')
-		i++;
-	cub->s = ft_strndup(line + j, i);
+    ft_printf("NO: %s\n", c->no);
+    ft_printf("SO: %s\n", c->so);
+    ft_printf("EA: %s\n", c->ea);
+    ft_printf("WE: %s\n", c->we);
+    ft_printf("S: %s\n", c->s);
+    ft_printf("R: %d %d\n", c->res[0], c->res[1]);
 }

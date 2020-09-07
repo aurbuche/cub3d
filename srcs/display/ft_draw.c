@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 16:22:46 by user42            #+#    #+#             */
-/*   Updated: 2020/09/07 10:52:42 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/07 20:02:55 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,35 +33,31 @@ static void		ft_draw_wall(t_cub *c, int x)
 
 static void		ft_draw_floor(t_cub *c, int x)
 {
-	t_color		color;
 	int			y;
 
 	y = c->res[1] - 1;
-	color.color = c->color_floor;
 	while (y >= c->end_draw && y > 0)
 	{
-		c->screen.img_data[y * c->res[0] + x] = color.color;
+		c->screen.img_data[y * c->res[0] + x] = c->color_floor;
 		y--;
 	}
 }
 
 static	void	ft_draw_ceil(t_cub *c, int k)
 {
-	t_color		color;
 	int			x;
 
 	x = 0;
-	color.color = c->color_ceiling;
 	while (x < c->start_draw)
 	{
-		c->screen.img_data[x * c->res[0] + k] = color.color;
+		c->screen.img_data[x * c->res[0] + k] = c->color_ceiling;
 		x++;
 	}
 }
 
-void			ft_draw(t_cub *cub, int x)
+void			ft_draw(t_cub *c, int x)
 {
-	ft_draw_floor(cub, x);
-    ft_draw_ceil(cub, x);
-	ft_draw_wall(cub, x);
+	ft_draw_floor(c, x);
+    ft_draw_ceil(c, x);
+	ft_draw_wall(c, x);
 }

@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 21:01:01 by user42            #+#    #+#             */
-/*   Updated: 2020/09/07 10:52:53 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/07 20:29:15 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ void			ft_init_colors(t_color color, t_cub *cub, char *line)
 		color.argb[1] = ft_atoi(cub->f_color[1]);
 		color.argb[2] = ft_atoi(cub->f_color[2]);
 		cub->color_floor = color.color;
+		ft_printf("%d", ft_atoi(cub->f_color[0]));
+		ft_printf("%d", color.argb[0]);
 		ft_printf("Floor:\n\e[48;2;%d;%d;%dm \e[0m ", ft_atoi(cub->f_color[0]), ft_atoi(cub->f_color[1]), ft_atoi(cub->f_color[2]));
-		ft_printf("R: %d, G: %d, B: %d\n", ft_atoi(cub->f_color[0]), ft_atoi(cub->f_color[1]), ft_atoi(cub->f_color[2]));
+		ft_printf("R: %d, G: %d, B: %d\n", color.argb[0], color.argb[2], color.argb[2]);
 	}
 	if (line[0] == 'C')
 	{
@@ -30,7 +32,7 @@ void			ft_init_colors(t_color color, t_cub *cub, char *line)
 		color.argb[2] = ft_atoi(cub->c_color[2]);
 		cub->color_ceiling = color.color;
 		ft_printf("Ceil:\n\e[48;2;%d;%d;%dm \e[0m ",  ft_atoi(cub->c_color[0]), ft_atoi(cub->c_color[1]), ft_atoi(cub->c_color[2]));
-		ft_printf("R: %d, G: %d, B: %d\n", ft_atoi(cub->c_color[0]), ft_atoi(cub->c_color[1]), ft_atoi(cub->c_color[2]));
+		ft_printf("R: %d, G: %d, B: %d\n", color.argb[0], color.argb[2], color.argb[2]);
 	}
 }
 

@@ -6,14 +6,15 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 15:22:25 by user42            #+#    #+#             */
-/*   Updated: 2020/07/21 13:28:47 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/07 16:16:34 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
 
-int         ft_close(t_cub *cub)
+int			ft_close(t_cub *cub)
 {
-    mlx_destroy_window(cub->mlx_ptr, cub->mlx_win);
-    exit(1);
+	mlx_destroy_window(cub->mlx_ptr, cub->mlx_win);
+	ft_free_cub(cub);
+	exit(1);
 }
