@@ -1,0 +1,17 @@
+R 820 560
+
+NO ./textures/colorstone.xpm
+SO ./textures/south.xpm
+WE ./textures/bluestone.xpm
+EA ./textures/oak_planks.xpm
+
+S ./textures/stone.xpm
+F 200,100,0
+C 255,255,255
+
+1111111
+1000001
+100N001
+1001001
+1001001
+1111111
