@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/07 10:53:14 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/07 13:29:58 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,7 @@ int				ft_map_analyze(char *line, t_cub *cub);
 int				ft_temporary(char *line, t_cub *cub);
 int				ft_check_map(t_cub *cub);
 int				ft_check_inside(t_cub *cub);
+void			ft_free_cub(t_cub *c);
 
 int				ft_begin_disp(t_cub *cub);
 int				ft_close(t_cub *cub);

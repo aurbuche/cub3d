@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:13:54 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/08/18 16:01:16 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/07 13:51:31 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int				ft_store_map(char *line, t_cub *cub)
 
 	i = 0;
 	j = -1;
-	cub->map = (char **)malloc(sizeof(char *) * cub->n_line + 1);
+	cub->map = malloc(sizeof(char *) * cub->n_line + 3);
 	while (line[i])
 	{
 		k = 0;
@@ -63,8 +63,8 @@ int				ft_temporary(char *line, t_cub *cub)
 		}
 	}
 	tmp = ft_strfjoin(tmp, "~", 1);
-	if (!ft_store_map(tmp, cub))
-		return (0);
+	// if (!ft_store_map(tmp, cub))
+	// 	return (0);
 	ft_delete(&tmp);
 	ft_delete(&line);
 	return (1);
@@ -74,11 +74,11 @@ int				ft_map_analyze(char *line, t_cub *cub)
 {
 	if (!ft_temporary(line, cub))
 		return (0);
-	if (!ft_check_map(cub))
-		return (0);
+	// if (!ft_check_map(cub))
+	// 	return (0);
 	ft_printf("_______________\n\n");
 	ft_printf("MAP CHECKED IN\n");
 	ft_printf("_______________\n\n");
-	ft_disp_map_ok(cub);
+	// ft_disp_map_ok(cub);
 	return (1);
 }

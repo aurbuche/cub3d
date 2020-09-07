@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:27:42 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/08/13 09:57:21 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/07 14:18:41 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strncpy(char *dest, const char *src, unsigned int n);
 char			*ft_strnstr(const char *haystack, const char *neddle, size_t len);
-char			*ft_strndup(const char *str, size_t n);
+char			*ft_strndup(char *str, size_t n);
 char			*ft_strtok(char *s, const char *charset);
 char			*strnfdup(char *str, int len);
 char			*ft_strnjoin(char *s1, char const *s2, size_t len);

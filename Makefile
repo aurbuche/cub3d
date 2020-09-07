@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/02 17:51:18 by user42            #+#    #+#              #
-#    Updated: 2020/09/04 12:24:50 by user42           ###   ########lyon.fr    #
+#    Updated: 2020/09/07 13:49:16 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ OBJ				=	$(SRCS:.c=.o) libft/libft.a minilibx/libmlx.a
 OBJ_PATH		=	obj/
 NAME			=	Cub3D
 CC				=	gcc
-CFLAGS			=	-Wall -Wextra -Werror -g3 #-fsanitize=address
+CFLAGS			=	-Wall -Wextra -Werror -g3 -fsanitize=address
 MLXFLAGS		=	-lX11 -lXext -L minilibx/ -lmlx -lm -pthread -lbsd
 RM				=	rm -f
 

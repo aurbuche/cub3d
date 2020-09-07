@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 17:59:45 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/07/08 13:20:35 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/07 14:37:53 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ void				r_converter(size_t i, char *line, t_cub *cub)
 		if (i >= ft_strlen(line))
 			i = ft_strlen(line);
 		k++;
+		ft_delete(&tmp);
 	}
-	ft_delete(&tmp);
 }

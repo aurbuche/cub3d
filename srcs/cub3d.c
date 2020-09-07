@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 09:25:11 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/08/18 15:56:24 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/07 13:59:25 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,15 @@ int			ft_start(int ac, char **av, t_cub *cub)
 
 void		ft_free_cub(t_cub *cub)
 {
-	size_t		i;
+	// size_t		i;
 
-	i = 0;
-	while (i < cub->n_line)
-	{
-		free(cub->map[i]);
-		i++;
-	}
+	// i = 0;
+	// while (i < cub->n_line)
+	// {
+	// 	dprintf(1, "__%s__", cub->map[i]);
+	// 	free(cub->map[i]);
+	// 	i++;
+	// }
 	ft_delete(&cub->no);
 	ft_delete(&cub->so);
 	ft_delete(&cub->ea);
@@ -47,7 +48,7 @@ int			main(int ac, char **av)
 
 	cub = ft_init_cub();
 	ft_start(ac, av, cub);
-	ft_begin_disp(cub);
+	// ft_begin_disp(cub);
 	ft_free_cub(cub);
 	free(cub);
 	return (0);
