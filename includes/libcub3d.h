@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/07 17:03:46 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/11 10:00:16 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,8 @@ typedef struct 			s_vect
 
 typedef union
 {
-	int				color;
-	char			argb[3];
+	int						color;
+	unsigned char			argb[3];
 }						t_color;
 
 
