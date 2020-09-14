@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 17:03:57 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/07 20:06:52 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/14 10:40:32 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ t_cub		*ft_init_cub(void)
 
 	if (!(cub = (t_cub *)malloc(sizeof(t_cub))))
 		return (NULL);
+	cub->n_line = 0;
+	cub->n_sprite = 0;
 	cub->fd = 0;
 	cub->c = 0;
 	cub->f = 0;

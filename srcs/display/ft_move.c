@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 12:17:15 by user42            #+#    #+#             */
-/*   Updated: 2020/09/06 17:58:17 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/14 09:35:34 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,7 @@ static void		ft_moverl(t_cub *c)
 void			ft_move(t_cub *c)
 {
 	ft_movefb(c);
+	c->maps.x = (int)c->pos.x;
+	c->maps.y = (int)c->pos.y;
 	ft_moverl(c);
 }
