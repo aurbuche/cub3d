@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/14 10:53:53 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/14 15:04:31 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,12 @@ typedef union
 	t_rgb		rgb;
 }						t_color;
 
+typedef struct			s_sprite
+{
+	t_vect		pos;
+	double		dist;
+}						t_sprite;
+
 
 typedef struct          s_cub
 {
@@ -124,6 +130,7 @@ typedef struct          s_cub
 	t_vect		sprite;
 	t_pos		step;
 	t_pos		maps;
+	t_sprite	*sprites;
 }                       t_cub;
 
 t_cub			*ft_init_cub();
@@ -163,5 +170,6 @@ void			ft_dir(t_cub *cub);
 void			ft_data(t_cub *cub);
 void			ft_turn(t_cub *c);
 void			ft_raycast_sprite(t_cub *cub);
+void			ft_search_sprite(t_cub *cub);
 
 #endif
