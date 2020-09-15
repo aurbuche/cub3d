@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/02 17:51:18 by user42            #+#    #+#              #
-#    Updated: 2020/09/07 17:08:04 by user42           ###   ########lyon.fr    #
+#    Updated: 2020/09/15 09:13:57 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ YELLOW = \033[0;33m
 SRCS_PARSING	= 	$(addprefix parsing/, ft_check.c ft_map_analyze.c\
 							ft_disp_map_ok.c ft_check_inside.c\
 							ft_disp_error.c ft_init_cub.c ft_parse.c\
-							ft_print_params.c)
+							ft_print_params.c ft_search_sprite.c)
 
 SRCS_CONVERT	=	$(addprefix convert/, f_converter.c c_converter.c\
 							no_converter.c so_converter.c we_converter.c\
@@ -35,7 +35,7 @@ SRCS_CONVERT	=	$(addprefix convert/, f_converter.c c_converter.c\
 SRCS_DISPLAY	=	$(addprefix display/, ft_begin_disp.c ft_close.c\
 							ft_loop.c ft_move.c ft_draw.c ft_textures.c\
 							ft_colors.c ft_start_windows.c ft_player.c\
-							ft_raycasting.c ft_data.c ft_turn.c)
+							ft_raycasting.c ft_data.c ft_turn.c ft_raycast_sprite.c)
 
 SRCS_NAME		=	cub3d.c $(SRCS_PARSING) $(SRCS_CONVERT) $(SRCS_DISPLAY)
 

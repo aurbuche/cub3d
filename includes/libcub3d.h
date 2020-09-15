@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/14 15:04:31 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/15 14:14:54 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,10 @@ typedef struct          s_cub
 {
 	size_t		n_line;
 	size_t		n_sprite;
+	int			res[2];
 	int			fd;
 	int			c;
 	int			f;
-	int			res[2];
 	int			end;
 	char		ori;
 	char		*f_color[3];
@@ -115,6 +115,7 @@ typedef struct          s_cub
 	double		camerax;
 	double		tex_pos;
 	double		tex_step;
+	double		inv_det;
 	int			tex_num;
 	double		*zbuffer;
 	t_im		screen;
@@ -171,5 +172,6 @@ void			ft_data(t_cub *cub);
 void			ft_turn(t_cub *c);
 void			ft_raycast_sprite(t_cub *cub);
 void			ft_search_sprite(t_cub *cub);
+void            ft_draw_sprites(t_cub *c);
 
 #endif
