@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/15 14:14:54 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/16 08:59:13 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,7 @@ typedef struct          s_cub
 	int			end_draw;
 	int			tex_x;
 	int			tex_y;
+	int			sprite_screen_x;
 	double		wall_dist;
 	double		camerax;
 	double		tex_pos;
@@ -129,6 +130,7 @@ typedef struct          s_cub
 	t_vect		pos;
 	t_vect		wall;
 	t_vect		sprite;
+	t_vect		transform;
 	t_pos		step;
 	t_pos		maps;
 	t_sprite	*sprites;
