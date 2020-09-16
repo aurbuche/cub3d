@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/16 08:59:13 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/16 13:50:14 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ typedef struct			s_sprite
 typedef struct          s_cub
 {
 	size_t		n_line;
-	size_t		n_sprite;
+	int			n_sprite;
 	int			res[2];
 	int			fd;
 	int			c;
@@ -112,6 +112,8 @@ typedef struct          s_cub
 	int			tex_x;
 	int			tex_y;
 	int			sprite_screen_x;
+	int			sprite_height;
+	int			sprite_width;
 	double		wall_dist;
 	double		camerax;
 	double		tex_pos;
@@ -131,6 +133,8 @@ typedef struct          s_cub
 	t_vect		wall;
 	t_vect		sprite;
 	t_vect		transform;
+	t_vect		sprite_draw_start;
+	t_vect		sprite_draw_end;
 	t_pos		step;
 	t_pos		maps;
 	t_sprite	*sprites;
@@ -175,5 +179,6 @@ void			ft_turn(t_cub *c);
 void			ft_raycast_sprite(t_cub *cub);
 void			ft_search_sprite(t_cub *cub);
 void            ft_draw_sprites(t_cub *c);
+void			ft_sprite_set_draw(t_cub *c);
 
 #endif
