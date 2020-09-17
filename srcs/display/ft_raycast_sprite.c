@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 10:51:30 by user42            #+#    #+#             */
-/*   Updated: 2020/09/16 13:45:10 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/17 10:08:41 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,8 @@ void				ft_raycast_sprite(t_cub *c)
 	i = 0;
 	i++;
 	c->end = 0;
-	ft_sort_sprite(c);	int		i;
-
-	i = 0;
+	ft_search_sprite(c);
+	ft_sort_sprite(c);
 	while (i < c->n_sprite)
 	{
 		c->sprite.x = c->sprites[i].pos.x - c->pos.x;
@@ -59,7 +58,7 @@ void				ft_raycast_sprite(t_cub *c)
 		c->transform.y = c->inv_det * (-c->plane.y * c->sprite.x + c->plane.x * c->sprite.y);
 		c->sprite_screen_x = (int)(c->res[0] / 2) * (1 + c->transform.x / c->transform.y);
 		ft_sprite_set_draw(c);
-		ft_draw_sprite(c, i);
+		ft_draw_sprites(c);
 		i++;
 	}
 }

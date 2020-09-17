@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_draw.c                                          :+:      :+:    :+:   */
+/*   ft_draw_cub.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 16:22:46 by user42            #+#    #+#             */
-/*   Updated: 2020/09/15 09:17:13 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/17 10:01:39 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ static void		ft_draw_wall(t_cub *c, int x)
 	while (i < c->end_draw)
 	{
 		dist = i * 256 - c->res[1] * 128 + c->text[c->tex_num].height * 128;
-		c->tex_y = (int)c->tex_pos & (dist * c->text[c->tex_num].height - 1);
+		c->tex.y = (int)c->tex_pos & (dist * c->text[c->tex_num].height - 1);
 		c->tex_pos += c->tex_step;
 		color.color = c->text[c->tex_num].img_data
-				[c->tex_y * c->text[c->tex_num].width + c->tex_x];
+				[c->tex.y * c->text[c->tex_num].width + c->tex.x];
 		c->screen.img_data[i * c->res[0] + x] = color.color;
 		i++;
 	}
