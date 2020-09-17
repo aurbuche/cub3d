@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/17 10:08:29 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/17 13:13:33 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,12 +113,12 @@ typedef struct          s_cub
 	int			sprite_height;
 	int			sprite_width;
 	int			stripe;
+	int			tex_num;
 	double		wall_dist;
 	double		camerax;
 	double		tex_pos;
 	double		tex_step;
 	double		inv_det;
-	int			tex_num;
 	double		*zbuffer;
 	t_im		screen;
 	t_im		text[5];

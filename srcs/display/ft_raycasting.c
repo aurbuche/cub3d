@@ -6,11 +6,24 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 10:30:00 by user42            #+#    #+#             */
-/*   Updated: 2020/09/15 11:46:23 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/17 14:23:01 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
+
+// static void		ft_init_dtab(int i, double tab[])
+// {
+// 	int		x;
+
+// 	x = 0;
+// 	while (x < i)
+// 	{
+// 		ft_printf("%d", i);
+// 		tab[x] = 0.0;
+// 		x++;
+// 	}
+// }
 
 static void			ft_setup(t_cub *c, int x)
 {
@@ -21,6 +34,7 @@ static void			ft_setup(t_cub *c, int x)
 	c->maps.y = (int)c->pos.y;
 	c->delta_dist.x = fabs(1 / c->dir_ray.x);
 	c->delta_dist.y = fabs(1 / c->dir_ray.y);
+	// ft_init_dtab(c->res[0], c->zbuffer);
 }
 
 static void			ft_search_wall(t_cub *c)
@@ -80,8 +94,10 @@ void				ft_raycasting(t_cub *c)
 		ft_search_wall(c);
 		DDA(c);
 		ft_data(c);
+		// ft_printf("{%lf}", c->wall_dist);
 		ft_apply_textures(c);
 		ft_draw(c, x);
+		c->zbuffer[x] = c->wall_dist;
 		x++;
 	}
 	ft_raycast_sprite(c);

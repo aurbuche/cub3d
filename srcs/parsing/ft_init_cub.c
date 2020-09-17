@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 17:03:57 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/15 09:17:16 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/17 14:22:44 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ t_cub		*ft_init_cub(void)
 	cub->s = NULL;
 	cub->color_floor = 0;
 	cub->color_ceiling = 0;
+	cub->wall_dist = 0.0;
 	ft_init_itab(2, cub->res);
 	return (cub);
 }
