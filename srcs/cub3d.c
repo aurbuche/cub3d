@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 09:25:11 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/14 09:44:21 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/18 14:04:25 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ void		ft_free_cub(t_cub *cub)
 		free(cub->map[i]);
 		i++;
 	}
+	free(cub->sprites);
+	free(cub->zbuffer);
 	ft_delete(&cub->no);
 	ft_delete(&cub->so);
 	ft_delete(&cub->ea);

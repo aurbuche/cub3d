@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 12:17:15 by user42            #+#    #+#             */
-/*   Updated: 2020/09/14 09:35:34 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/18 14:08:37 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void		ft_moverl(t_cub *c)
 		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')
 			c->pos.x -= c->plane.x * MOVESPEED;
 		c->pos.y += c->plane.y * MOVESPEED;
-		if (c->map[(int)c->pos.y][(int)c->pos.y] == '1')
+		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')
 			c->pos.y -= c->plane.y * MOVESPEED;
 	}
 	if (c->move == 'A')
@@ -51,7 +51,7 @@ static void		ft_moverl(t_cub *c)
 		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')
 			c->pos.x += c->plane.x * MOVESPEED;
 		c->pos.y -= c->plane.y * MOVESPEED;
-		if (c->map[(int)c->pos.y][(int)c->pos.y] == '1')
+		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')
 			c->pos.y += c->plane.y * MOVESPEED;
 	}
 }

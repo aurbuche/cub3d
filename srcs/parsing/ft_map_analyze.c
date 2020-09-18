@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:13:54 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/17 09:03:50 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/18 13:36:43 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int				ft_store_map(char *line, t_cub *cub)
 
 	i = 0;
 	j = -1;
-	cub->map = malloc(sizeof(char *) * cub->n_line + 3);
+	cub->map = malloc(sizeof(char *) * cub->n_line);
 	while (line[i])
 	{
 		k = 0;
@@ -47,7 +47,7 @@ int				ft_temporary(char *line, t_cub *cub)
 {
 	char	*tmp;
 
-	tmp = ft_strdup("");
+	tmp = NULL;
 	while (get_next_line(cub->fd, &line) > 0)
 	{
 		if (cub->n_line == 0 && line[0] != '\0')
