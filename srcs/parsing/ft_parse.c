@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 17:45:52 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/07 18:08:39 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/18 09:05:29 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ int					ft_parse(char *line, t_cub *cub)
 		ft_printf("PARAMETERS COMPLETED\n");
 		ft_printf("_____________________\n\n");
 	}
+	cub->zbuffer = (double *)malloc(sizeof(double) * cub->res[0]);
 	if (!ft_map_analyze(line, cub))
 		return (0);
 	return (1);
