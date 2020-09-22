@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 12:17:15 by user42            #+#    #+#             */
-/*   Updated: 2020/09/18 14:08:37 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 11:42:12 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,9 @@ void			ft_move(t_cub *c)
 	c->maps.x = (int)c->pos.x;
 	c->maps.y = (int)c->pos.y;
 	ft_moverl(c);
+	if (c->map[(int)c->pos.x][(int)c->pos.y] == '2')
+	{
+		c->map[(int)c->pos.x][(int)c->pos.y] = '0';
+		c->n_ruby++;
+	}
 }

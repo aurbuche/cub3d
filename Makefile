@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/02 17:51:18 by user42            #+#    #+#              #
-#    Updated: 2020/09/18 13:17:29 by user42           ###   ########lyon.fr    #
+#    Updated: 2020/09/22 11:40:31 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SRCS_DISPLAY	=	$(addprefix display/, ft_begin_disp.c ft_close.c\
 							ft_loop.c ft_move.c ft_draw_cub.c ft_textures.c\
 							ft_colors.c ft_start_windows.c ft_player.c\
 							ft_raycasting.c ft_data.c ft_turn.c ft_raycast_sprite.c\
-							ft_draw_sprites.c ft_sprite_set_draw.c)
+							ft_draw_sprites.c ft_sprite_set_draw.c ft_level.c)
 
 SRCS_NAME		=	cub3d.c $(SRCS_PARSING) $(SRCS_CONVERT) $(SRCS_DISPLAY)
 

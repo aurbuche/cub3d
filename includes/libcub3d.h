@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/17 13:13:33 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 12:11:41 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,11 +82,14 @@ typedef struct          s_cub
 {
 	size_t		n_line;
 	int			n_sprite;
+	int			n_ruby;
+	int			level;
 	int			res[2];
 	int			fd;
 	int			c;
 	int			f;
 	int			end;
+	int			malloc;
 	char		ori;
 	char		*f_color[3];
 	char		*c_color[3];
@@ -114,6 +117,7 @@ typedef struct          s_cub
 	int			sprite_width;
 	int			stripe;
 	int			tex_num;
+	int			sp;
 	double		wall_dist;
 	double		camerax;
 	double		tex_pos;
@@ -141,6 +145,7 @@ typedef struct          s_cub
 }                       t_cub;
 
 t_cub			*ft_init_cub();
+int				ft_start(int ac, char **av, int level);
 int				ft_check_cub(int ac, char **av, t_cub *cub);
 void			ft_disp_error(char *str, t_cub *cub);
 void			ft_disp_map_ok(t_cub *cub);
@@ -180,5 +185,6 @@ void			ft_raycast_sprite(t_cub *cub);
 void			ft_search_sprite(t_cub *cub);
 void            ft_draw_sprites(t_cub *c);
 void			ft_sprite_set_draw(t_cub *c);
+void			ft_next_level(t_cub *c);
 
 #endif
