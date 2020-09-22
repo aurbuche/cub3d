@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 16:22:31 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/07/07 20:41:35 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 14:26:47 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,65 +16,85 @@
 
 #include "../../include/get_next_line.h"
 
-int			error(char **ptr, size_t *ptret)
+static int				ft_gnl_check_error(int fd, char **str)
 {
-	ft_delete(ptr);
-	*ptret = 0;
-	return (-1);
+	if (fd < 0 || BUFFER_SIZE < 1)
+	{
+		if (*str)
+			free(*str);
+		return (-1);
+	}
+	if (*str == NULL)
+	{
+		if (!(*str = ft_strdup("")))
+		{
+			free(*str);
+			return (-1);
+		}
+	}
+	return (0);
 }
 
-size_t		overflow(char **line, char **str, size_t *size, char *nl_pointer)
+static char		*ft_read(char *str, int fd)
 {
-	size_t line_size;
+	char	*buff;
+	char	*tmp;
+	int		ret;
 
-	if (nl_pointer != NULL)
-		line_size = (size_t)(nl_pointer - *str + 1);
-	else
-		line_size = *size;
-	if (line_size == 0)
+	if (!(buff = malloc(sizeof(char) * (BUFFER_SIZE + 1))))
+		return (NULL);
+	while ((ret = read(fd, buff, BUFFER_SIZE)) > 0)
 	{
-		free(*str);
-		*str = NULL;
+		buff[ret] = '\0';
+		tmp = ft_strjoin(str, buff);
+		str = tmp;
+		if (ft_strchr(buff, '\n'))
+			break ;
+	}
+	free(buff);
+	return (str);
+}
+
+static int				ft_complete(char **str, char **line)
+{
+	size_t i;
+	char *tmp;
+
+	i = 0;
+	while (*str && *str[i])
+	{
+		while ((*str)[i] && (*str)[i] != '\n')
+			i++;
+		if ((*str)[i] == '\n')
+		{
+			*line = ft_substr(*str, 0, i);
+			tmp = ft_strdup((*str) + i + 1);
+			free(*str);
+			*str = tmp;
+			return (1);
+		}
+		else
+		{
+			*line = ft_substr(*str, 0, i);
+			return (0);
+		}
+	}
+	*line = ft_strdup("");
+	return (0);
+}
+
+size_t				get_next_line(int fd, char **line)
+{
+	static char		*str = NULL;
+
+	*line = NULL;
+	if (ft_gnl_check_error(fd, &str) == -1)
+		return (-1);
+	str = ft_read(str, fd);
+	if (ft_complete(&str, line) == 0)
+	{
+		free(str);
 		return (0);
 	}
-	if ((*line = (char *)malloc(line_size + 1)) == NULL)
-		return (error(str, size));
-	ft_memcpy(*line, *str, line_size);
-	if (!(ft_memchr(*line, '\n', line_size)))
-		(*line)[line_size] = '\0';
-	else
-		(*line)[line_size - 1] = '\0';
-	*size -= line_size;
-	ft_memcpy(*str, *str + line_size, *size);
-	if (!(ft_memchr(*str, '\n', line_size)))
-		line_size++;
-	return ((ssize_t)line_size);
-}
-
-size_t		get_next_line(int fd, char **line)
-{
-	static char			*str = NULL;
-	static size_t		size = 0;
-	ssize_t				ret;
-	char				*tmp;
-	char				buffer[BUFFER_SIZE];
-
-	if (read(fd, NULL, 0) == -1 || !line)
-		return (-1);
-	tmp = ft_memchr(str, '\n', size);
-	while (tmp == NULL)
-	{
-		if ((ret = read(fd, buffer, BUFFER_SIZE)) == 0)
-			break ;
-		if (!(tmp = (char *)malloc(size + (size_t)ret)))
-			return (error(&str, &size));
-		ft_memcpy(tmp, str, size);
-		ft_memcpy(tmp + size, buffer, (size_t)ret);
-		if (str)
-			free(str);
-		str = tmp;
-		tmp = ft_memchr(str + size, '\n', (size_t)ret);
-		size += (size_t)ret;
-	}
-	return (overflow(line, &str, &size, tmp));
+	return (1);
 }
