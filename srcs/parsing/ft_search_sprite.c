@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 13:12:15 by user42            #+#    #+#             */
-/*   Updated: 2020/09/18 09:47:00 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 14:54:35 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,5 @@ void            ft_search_sprite(t_cub *c)
 	}
 	c->sprites = (t_sprite *)malloc(sizeof(t_sprite) * c->n_sprite);
 	ft_stack_sprite(c);
+	c->sp = 1;
 }
