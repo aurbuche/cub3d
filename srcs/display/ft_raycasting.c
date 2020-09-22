@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 10:30:00 by user42            #+#    #+#             */
-/*   Updated: 2020/09/18 11:37:06 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 18:36:39 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ static void			ft_search_wall(t_cub *c)
 	}
 }
 
-static void			DDA(t_cub *c)
+static void			dda(t_cub *c)
 {
-	while(!c->ishit)
+	while (!c->ishit)
 	{
 		if (c->side_dist.x < c->side_dist.y)
 		{
@@ -78,7 +78,7 @@ void				ft_raycasting(t_cub *c)
 	{
 		ft_setup(c, x);
 		ft_search_wall(c);
-		DDA(c);
+		dda(c);
 		ft_data(c);
 		ft_apply_textures(c);
 		ft_draw(c, x);

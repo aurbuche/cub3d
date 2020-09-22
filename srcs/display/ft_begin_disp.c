@@ -6,17 +6,16 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 15:10:49 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/04 14:14:47 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 18:22:36 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../../includes/libcub3d.h"
 
 int			unused_key(int key, t_cub *cub)
 {
 	if (key == K_W)
-		cub->move =  0;
+		cub->move = 0;
 	else if (key == K_S)
 		cub->move = 0;
 	else if (key == K_A)

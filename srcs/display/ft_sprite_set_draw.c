@@ -6,18 +6,18 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/16 13:46:01 by user42            #+#    #+#             */
-/*   Updated: 2020/09/18 09:54:18 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 18:32:12 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
 
-static int		ft_abs(int	n)
+static int		ft_abs(int n)
 {
 	return (n < 0 ? -n : n);
 }
 
-void	ft_sprite_set_draw(t_cub *c)
+void			ft_sprite_set_draw(t_cub *c)
 {
 	c->sprite_height = ft_abs((int)(c->res[1] / (c->transform.y)));
 	c->sprite_draw_start.y = (-c->sprite_height / 2 + c->res[1] / 2);

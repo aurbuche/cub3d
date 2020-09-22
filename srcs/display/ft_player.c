@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 11:53:21 by user42            #+#    #+#             */
-/*   Updated: 2020/09/04 13:56:45 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 18:33:27 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void		ft_dir(t_cub *cub)
 
 void		ft_start_player_pos(char c, t_cub *cub, size_t x, size_t y)
 {
-    cub->ori = c;
-	cub->pos.x = x ;
+	cub->ori = c;
+	cub->pos.x = x;
 	cub->pos.y = y;
 }

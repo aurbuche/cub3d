@@ -6,20 +6,16 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:13:54 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/18 13:36:43 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 17:39:45 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
 
-int				ft_store_map(char *line, t_cub *cub)
+static int			ft_store_map(char *line, t_cub *cub, size_t i, size_t j)
 {
-	size_t	i;
-	size_t	j;
 	size_t	k;
 
-	i = 0;
-	j = -1;
 	cub->map = malloc(sizeof(char *) * cub->n_line);
 	while (line[i])
 	{
@@ -43,7 +39,7 @@ int				ft_store_map(char *line, t_cub *cub)
 	return (1);
 }
 
-int				ft_temporary(char *line, t_cub *cub)
+int					ft_temporary(char *line, t_cub *cub)
 {
 	char	*tmp;
 
@@ -63,14 +59,14 @@ int				ft_temporary(char *line, t_cub *cub)
 		}
 	}
 	tmp = ft_strfjoin(tmp, "~", 1);
-	if (!ft_store_map(tmp, cub))
+	if (!ft_store_map(tmp, cub, 0, -1))
 		return (0);
 	ft_delete(&tmp);
 	ft_delete(&line);
 	return (1);
 }
 
-int				ft_map_analyze(char *line, t_cub *cub)
+int					ft_map_analyze(char *line, t_cub *cub)
 {
 	if (!ft_temporary(line, cub))
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 16:22:46 by user42            #+#    #+#             */
-/*   Updated: 2020/09/18 09:38:13 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 18:42:14 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,13 @@ static void		ft_draw_floor(t_cub *c, int x)
 static	void	ft_draw_ceil(t_cub *c, int k)
 {
 	int			x;
+	t_color		color;
 
 	x = 0;
+	color.color = c->color_ceiling;
 	while (x < c->start_draw)
 	{
-		c->screen.img_data[x * c->res[0] + k] = c->color_ceiling;
+		c->screen.img_data[x * c->res[0] + k] = color.color;
 		x++;
 	}
 }
@@ -58,6 +60,6 @@ static	void	ft_draw_ceil(t_cub *c, int k)
 void			ft_draw(t_cub *c, int x)
 {
 	ft_draw_floor(c, x);
-    ft_draw_ceil(c, x);
+	ft_draw_ceil(c, x);
 	ft_draw_wall(c, x);
 }

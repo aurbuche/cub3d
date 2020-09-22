@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/22 09:08:09 by user42            #+#    #+#             */
-/*   Updated: 2020/09/22 12:07:27 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 18:32:45 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,14 @@ static char		**ft_select_level(t_cub *c)
 	next[0] = ft_strdup("./Cub3D");
 	if (c->level == 1)
 		next[1] = ft_strdup("level2.cub");
-	else if (c->level == 2)
-		next[1] = ft_strdup("level3.cub");
 	return (next);
 }
 
 void			ft_next_level(t_cub *c)
 {
 	char		**next;
-	
-	if (!(c->level == 2))
+
+	if (!(c->level == 1))
 	{
 		c->level++;
 		next = ft_select_level(c);

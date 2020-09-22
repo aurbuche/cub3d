@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/22 12:11:41 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 16:34:09 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ typedef struct			s_sprite
 	double		dist;
 }						t_sprite;
 
-
 typedef struct          s_cub
 {
 	size_t		n_line;
@@ -85,6 +84,7 @@ typedef struct          s_cub
 	int			n_ruby;
 	int			level;
 	int			res[2];
+	int			reso;
 	int			fd;
 	int			c;
 	int			f;
@@ -124,6 +124,8 @@ typedef struct          s_cub
 	double		tex_step;
 	double		inv_det;
 	double		*zbuffer;
+	int			zbuf;
+	int			map_analyze;
 	t_im		screen;
 	t_im		text[5];
 	t_vect		dir;

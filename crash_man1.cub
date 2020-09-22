@@ -1,4 +1,5 @@
 R 820 560
+R 43 54
 
 NO ./textures/north.bmp
 SO ./textures/south.bmp

@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 17:45:52 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/22 15:10:13 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 18:40:50 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,22 @@ static int			ft_complete_params(t_cub *cub)
 	return (i);
 }
 
+static void			color_converter(size_t i, char *line, t_cub *c)
+{
+	if (line[i] == 'F' && !c->f)
+	{
+		c->f = 1;
+		f_converter(i, line, c);
+	}
+	else if(line[i] == 'C' && !c->c)
+	{
+		c->c = 1;
+		c_converter(i, line, c);
+	}
+	else
+		ft_disp_error("One of the two color already exist", c);
+}
+
 int					ft_convert(char *line, t_cub *cub)
 {
 	size_t		i;
@@ -29,10 +45,8 @@ int					ft_convert(char *line, t_cub *cub)
 	i = 0;
 	if (line[i] == 'R')
 		r_converter(i, line, cub);
-	else if (line[i] == 'F')
-		f_converter(i, line, cub);
-	else if (line[i] == 'C')
-		c_converter(i, line, cub);
+	else if (line[i] == 'F' || line[i] == 'C')
+		color_converter(i, line, cub);
 	else if (line[i] == 'N' && line[i + 1] == 'O')
 		no_converter(i + 2, line, cub);
 	else if (line[i] == 'S' && line[i + 1] == 'O')
@@ -63,7 +77,9 @@ int					ft_parse(char *line, t_cub *cub)
 		ft_printf("_____________________\n\n");
 	}
 	cub->zbuffer = (double *)malloc(sizeof(double) * cub->res[0]);
+	cub->zbuf = 1;
 	if (!ft_map_analyze(line, cub))
 		return (0);
+	cub->map_analyze = 1;
 	return (1);
 }

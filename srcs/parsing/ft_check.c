@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 10:51:41 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/22 12:30:46 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 16:21:13 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ int			ft_1_line(char *str)
 	while (str[i])
 	{
 		if (!ft_strchr("1 \t", str[i]))
-		{
-			dprintf(1, "%ld:[%c]", i, str[i]);
 			return (0);
-		}
 		i++;
 	}
 	return (1);
@@ -50,7 +47,6 @@ int			ft_check_map(t_cub *cub)
 	size_t		i;
 
 	i = 1;
-	dprintf(1, "%ld\n", cub->n_line);
 	if (!ft_1_line(cub->map[0]) ||
 		!ft_1_line(cub->map[cub->n_line - 1]))
 		ft_disp_error("The map was not close!", cub);

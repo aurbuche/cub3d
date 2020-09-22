@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 10:51:30 by user42            #+#    #+#             */
-/*   Updated: 2020/09/22 14:54:21 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 18:35:42 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void				ft_raycast_sprite(t_cub *c)
 	int		i;
 
 	i = 0;
-	
 	if (c->sp)
 		free(c->sprites);
 	ft_search_sprite(c);

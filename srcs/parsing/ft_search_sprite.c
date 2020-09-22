@@ -6,13 +6,13 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 13:12:15 by user42            #+#    #+#             */
-/*   Updated: 2020/09/22 14:54:35 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/22 16:52:47 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
 
-static void     ft_stack_sprite(t_cub *c)
+static void			ft_stack_sprite(t_cub *c)
 {
 	size_t	i;
 	int		j;
@@ -37,7 +37,7 @@ static void     ft_stack_sprite(t_cub *c)
 	}
 }
 
-void            ft_search_sprite(t_cub *c)
+void				ft_search_sprite(t_cub *c)
 {
 	size_t	i;
 	int		j;
