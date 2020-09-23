@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 17:45:52 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/22 18:40:50 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/23 16:04:46 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void			color_converter(size_t i, char *line, t_cub *c)
 		c->f = 1;
 		f_converter(i, line, c);
 	}
-	else if(line[i] == 'C' && !c->c)
+	else if (line[i] == 'C' && !c->c)
 	{
 		c->c = 1;
 		c_converter(i, line, c);

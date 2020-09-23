@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 22:46:05 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/22 18:20:37 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/23 16:06:26 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void				c_converter(size_t i, char *line, t_cub *cub)
 	int		j;
 	int		k;
 
-	k = 0;
+	k = ft_check_color(line, cub);
 	while (line[i])
 	{
 		j = 0;

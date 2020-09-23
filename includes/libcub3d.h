@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/22 16:34:09 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/23 16:29:23 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,7 @@ typedef struct          s_cub
 	double		*zbuffer;
 	int			zbuf;
 	int			map_analyze;
+	int			player;
 	t_im		screen;
 	t_im		text[5];
 	t_vect		dir;
@@ -141,7 +142,7 @@ typedef struct          s_cub
 	t_vect		sprite_draw_start;
 	t_vect		sprite_draw_end;
 	t_pos		step;
-	t_pos		maps;
+	t_vect		maps;
 	t_pos		tex;
 	t_sprite	*sprites;
 }                       t_cub;
@@ -188,5 +189,6 @@ void			ft_search_sprite(t_cub *cub);
 void            ft_draw_sprites(t_cub *c);
 void			ft_sprite_set_draw(t_cub *c);
 void			ft_next_level(t_cub *c);
+int				ft_check_color(char *line, t_cub *cub);
 
 #endif
