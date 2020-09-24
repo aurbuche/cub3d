@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/24 09:54:22 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/24 16:17:21 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,19 +77,32 @@ typedef struct			s_sprite
 	double		dist;
 }						t_sprite;
 
+typedef struct			s_bpm_file
+{
+	unsigned char	bmp_type[2];
+	int				size;
+	short			reserved1;
+	short			reserved2;
+	unsigned int	off_bits;
+}						t_bpm_file;
+
+typedef struct			s_bpm_info
+{
+	unsigned int		size;
+	unsigned int		width;
+	unsigned int		height;
+	short int			plane;
+	short int			bit_count;
+	unsigned int		compression;
+	unsigned int		size_image;
+	unsigned int		ppmx;
+	unsigned int		ppmy;
+	unsigned int		clr_used;
+	unsigned int		clr_important;
+}						t_bpm_info;
+
 typedef struct          s_cub
 {
-	size_t		n_line;
-	int			n_sprite;
-	int			n_ruby;
-	int			level;
-	int			res[2];
-	int			reso;
-	int			fd;
-	int			c;
-	int			f;
-	int			end;
-	int			malloc;
 	char		ori;
 	char		*f_color[3];
 	char		*c_color[3];
@@ -103,6 +116,18 @@ typedef struct          s_cub
 	void		*mlx_win;
 	char		move;
 	char		turn;
+	size_t		n_line;
+	int			n_sprite;
+	int			n_ruby;
+	int			flag;
+	int			level;
+	int			res[2];
+	int			reso;
+	int			fd;
+	int			c;
+	int			f;
+	int			end;
+	int			malloc;
 	int			color_ceiling;
 	int			color_floor;
 	int			ishit;
@@ -118,15 +143,15 @@ typedef struct          s_cub
 	int			stripe;
 	int			tex_num;
 	int			sp;
+	int			zbuf;
+	int			map_analyze;
+	int			player;
 	double		wall_dist;
 	double		camerax;
 	double		tex_pos;
 	double		tex_step;
 	double		inv_det;
 	double		*zbuffer;
-	int			zbuf;
-	int			map_analyze;
-	int			player;
 	t_im		screen;
 	t_im		text[5];
 	t_vect		dir;
@@ -167,6 +192,7 @@ int				ft_temporary(char *line, t_cub *cub);
 int				ft_check_map(t_cub *cub);
 int				ft_check_inside(t_cub *cub);
 void			ft_free_cub(t_cub *c);
+void			ft_save_image(t_cub *c, char *filename);
 
 int				ft_begin_disp(t_cub *cub);
 int				ft_close(t_cub *cub);

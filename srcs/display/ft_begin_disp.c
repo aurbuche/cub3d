@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 15:10:49 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/24 10:57:54 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/24 16:19:49 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,11 @@ int			ft_begin_disp(t_cub *cub)
 		return (EXIT_FAILURE);
 	ft_dir(cub);
 	ft_start_window(cub);
+	if (cub->flag == 's')
+	{
+		ft_raycasting(cub);
+		ft_save_image(cub, "screen.bmp");
+	}
 	mlx_hook(cub->mlx_win, 02, 1L << 0, &use_key, cub);
 	mlx_hook(cub->mlx_win, 03, 1L << 1, &unused_key, cub);
 	mlx_loop_hook(cub->mlx_ptr, &cub_loop, cub);

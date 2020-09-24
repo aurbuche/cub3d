@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/02 17:51:18 by user42            #+#    #+#              #
-#    Updated: 2020/09/22 14:56:06 by user42           ###   ########lyon.fr    #
+#    Updated: 2020/09/24 16:16:07 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ YELLOW = \033[0;33m
 SRCS_PARSING	= 	$(addprefix parsing/, ft_check.c ft_map_analyze.c\
 							ft_disp_map_ok.c ft_check_inside.c\
 							ft_disp_error.c ft_init_cub.c ft_parse.c\
-							ft_print_params.c ft_search_sprite.c)
+							ft_print_params.c ft_search_sprite.c\
+							ft_save_image.c)
 
 SRCS_CONVERT	=	$(addprefix convert/, f_converter.c c_converter.c\
 							no_converter.c so_converter.c we_converter.c\
