@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/23 16:29:23 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/24 09:54:22 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ typedef struct 			s_vect
 
 typedef struct			s_rgb
 {
-	unsigned char	r;
-	unsigned char	g;
 	unsigned char	b;
+	unsigned char	g;
+	unsigned char	r;
 	unsigned char	a;
 }						t_rgb;
 
@@ -142,7 +142,7 @@ typedef struct          s_cub
 	t_vect		sprite_draw_start;
 	t_vect		sprite_draw_end;
 	t_pos		step;
-	t_vect		maps;
+	t_pos		maps;
 	t_pos		tex;
 	t_sprite	*sprites;
 }                       t_cub;

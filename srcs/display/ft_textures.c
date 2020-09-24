@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/04 16:42:56 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/23 16:35:42 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/24 10:57:38 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void			ft_apply_textures(t_cub *c)
 	else
 		c->wall.x = c->pos.x + c->wall_dist * c->dir_ray.x;
 	c->wall.x -= (int)c->wall.x;
-	c->tex.x = (int)(c->wall.x * c->text[c->tex_num].width);
+	c->tex.x = (int)(c->wall.x * (double)c->text[c->tex_num].width);
 	if (c->side == 0 && c->dir_ray.x > 0)
 		c->tex.x = c->text[c->tex_num].width - c->tex.x - 1;
 	if (c->side == 1 && c->dir_ray.y < 0)

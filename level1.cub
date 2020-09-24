@@ -1,9 +1,9 @@
-R 1000 650
+R 950 600
 
 NO ./textures/eagle.xpm
-SO ./textures/S.xpm
-WE ./textures/W.xpm
-EA ./textures/E.xpm
+SO ./textures/south.xpm
+WE ./textures/duck.xpm
+EA ./textures/stone.xpm
 
 S ./textures/ruby.xpm
 F 253,0,0
@@ -12,7 +12,7 @@ C 0,0,255
 111111111  111
 100100001111011
 12000000000001
-1100000110111
+1100000110011
 100N00001101
 111111111101
 121000000001

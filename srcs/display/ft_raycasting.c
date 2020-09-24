@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 10:30:00 by user42            #+#    #+#             */
-/*   Updated: 2020/09/23 17:25:44 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/24 10:52:13 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ static void			ft_setup(t_cub *c, int x)
 	c->maps.y = (int)c->pos.y;
 	c->delta_dist.x = fabs(1 / c->dir_ray.x);
 	c->delta_dist.y = fabs(1 / c->dir_ray.y);
-	// printf("%f:%f\n", c->pos.x, c->pos.y);
 }
 
 static void			ft_search_wall(t_cub *c)
@@ -75,7 +74,7 @@ void				ft_raycasting(t_cub *c)
 	int		x;
 
 	x = 0;
-	while (x <= c->res[0] - 1)
+	while (x < c->res[0])
 	{
 		ft_setup(c, x);
 		ft_search_wall(c);

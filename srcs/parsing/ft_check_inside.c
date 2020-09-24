@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/19 10:24:24 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/22 16:20:43 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/24 11:41:50 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int			ft_check_corridor(size_t i, size_t j, t_cub *cub)
 {
 	if (!ft_strchr("NSEW012\t", cub->map[i][j + 1])
 		|| (!ft_strchr("NSEW012\t", cub->map[i + 1][j])))
-		ft_disp_error("Map is not close!", cub);
+		ft_disp_error("Map error!", cub);
 	return (1);
 }
 

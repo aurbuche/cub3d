@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 13:47:43 by user42            #+#    #+#             */
-/*   Updated: 2020/09/22 12:06:55 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/24 10:38:10 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int			cub_loop(t_cub *c)
 		ft_move(c);
 	if (!c->end)
 		ft_raycasting(c);
-	if (c->n_ruby == 1 && !c->end)
+	if (c->n_ruby == 3 && !c->end)
 		ft_next_level(c);
 	if (c->end)
 		ft_close(c);
