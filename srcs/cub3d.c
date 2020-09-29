@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 09:25:11 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/24 16:21:05 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/29 09:12:55 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void		ft_flag(t_cub *cub, int ac, char **av)
 		ft_disp_error("Flag error.", cub);
 }
 
-int			ft_start(int ac, char **av, int level)
+int				ft_start(int ac, char **av, int level)
 {
 	char		*line;
 	t_cub		*cub;
@@ -44,7 +44,7 @@ int			ft_start(int ac, char **av, int level)
 	return (0);
 }
 
-void		ft_free_cub(t_cub *cub)
+void			ft_free_cub(t_cub *cub)
 {
 	size_t		i;
 
@@ -65,9 +65,8 @@ void		ft_free_cub(t_cub *cub)
 	ft_delete(&cub->s);
 }
 
-int			main(int ac, char **av)
+int				main(int ac, char **av)
 {
-
 	ft_start(ac, av, 0);
 	return (0);
 }

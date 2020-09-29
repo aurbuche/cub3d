@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 15:15:44 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 16:32:36 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/09/29 09:12:29 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void		ft_save_image(t_cub *c, char *filename)
 	bi.plane = 1;
 	bi.bit_count = 24;
 	bi.compression = 0;
-	bi.size_image = c->res[0] * c->res[1]* 4 + 54;
+	bi.size_image = c->res[0] * c->res[1] * 4 + 54;
 	bi.ppmx = 2;
 	bi.ppmy = 2;
 	bi.clr_used = 0;
