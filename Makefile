@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/02 17:51:18 by user42            #+#    #+#              #
-#    Updated: 2020/09/24 16:16:07 by user42           ###   ########lyon.fr    #
+#    Updated: 2020/09/30 16:08:33 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,9 @@ $(NAME) :			$(OBJ)
 						@$(CC) $(CFLAGS) -o $@ -c $<
 						@printf "	\033[2K\r$(LIGHT_RED)Compiling...		\033[0m"
 
-clean :				libft_clean #minilibx_clean
+clean :
+					@make -C $(LIBFT_PATH) clean
+					@make -C $(MINILIBX_PATH) clean
 						@printf "\33[2K\r$(LIGHT_RED)Deleting cub3D srcs/		\033[37m"
 						@sleep 0.1
 						@printf "\33[2K\r$(LIGHT_RED)Deleting cub3D srcs/.		\033[37m"
@@ -88,28 +90,15 @@ clean :				libft_clean #minilibx_clean
 						@printf "\33[2K\r$(LIGHT_RED)Deleted successfully!\n\033[0m"
 
 fclean 	:			clean
+					@make -C $(LIBFT_PATH) fclean
 						@$(RM) ${NAME}
 
 re :				fclean all
 
-
 libft_all :
 					@make -C $(LIBFT_PATH) all
 
-
-libft_clean :
-					@make -C $(LIBFT_PATH) clean
-
-
-libft_fclean :
-					@make -C $(LIBFT_PATH) fclean
-
-
 minilibx_all :
 					@make -C $(MINILIBX_PATH) all
-
-
-minilibx_clean :
-					@make -C $(MINILIBX_PATH) clean
 
 .PHONY :		all clean fclean re
