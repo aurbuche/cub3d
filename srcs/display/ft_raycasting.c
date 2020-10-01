@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 10:30:00 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 10:52:13 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/01 09:48:41 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void				ft_raycasting(t_cub *c)
 		ft_data(c);
 		ft_apply_textures(c);
 		ft_draw(c, x);
-		c->zbuffer[x] = c->wall_dist + 0.0;
+		c->zbuffer[x] = c->wall_dist;
 		x++;
 	}
 	ft_raycast_sprite(c);

@@ -6,11 +6,20 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:13:54 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/23 16:24:46 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/01 10:12:35 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
+static int			check_player(char c, t_cub *cub, size_t k, size_t j)
+{
+	if (ft_strchr("NSEW", c))
+	{
+		ft_start_player_pos(c, cub, k, j);
+		return (1);
+	}
+	return (0);
+}
 
 static int			ft_store_map(char *line, t_cub *cub, size_t i, size_t j)
 {
@@ -25,8 +34,8 @@ static int			ft_store_map(char *line, t_cub *cub, size_t i, size_t j)
 		(ft_cchr(line, i, '~') - i + 1));
 		while (line[i] && line[i] != '~')
 		{
-			if (ft_strchr("NSEW", line[i]))
-				ft_start_player_pos(line[i], cub, k, j);
+			if (check_player(line[i], cub, k, j))
+				line[i] = '0';
 			cub->map[j][k] = line[i];
 			k++;
 			i++;

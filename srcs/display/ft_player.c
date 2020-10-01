@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 11:53:21 by user42            #+#    #+#             */
-/*   Updated: 2020/09/23 17:02:44 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/01 10:05:50 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ void		ft_plane(t_cub *cub)
 
 void		ft_dir(t_cub *cub)
 {
+	cub->pos.x = (double)cub->maps.x + (double)0.5;
+	cub->pos.y = (double)cub->maps.y + (double)0.5;
 	if (cub->ori == 'N')
 	{
 		cub->dir.x = -1;
@@ -66,6 +68,6 @@ void		ft_start_player_pos(char c, t_cub *cub, size_t x, size_t y)
 	if (cub->ori)
 		cub->player = 2;
 	cub->ori = c;
-	cub->pos.x = x + 0.5;
-	cub->pos.y = y + 0.5;
+	cub->maps.x = x;
+	cub->maps.y = y;
 }

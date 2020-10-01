@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/02 17:51:18 by user42            #+#    #+#              #
-#    Updated: 2020/09/30 16:08:33 by user42           ###   ########lyon.fr    #
+#    Updated: 2020/10/01 08:45:53 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ all :	libft_all minilibx_all ${NAME}
 
 $(NAME) :			$(OBJ)
 						@$(CC) $(CFLAGS) -o $@ $(OBJ) $(MLXFLAGS)
-						printf "\033[2K\r$(DARK_BLUE)Cub3D\t:\t$(LIGHT_GREEN)Updated\n\033[0m"
+						@printf "\033[2K\r$(DARK_BLUE)Cub3D\t:\t$(LIGHT_GREEN)Updated\n\033[0m"
 
 %.o :				%.c $(HEADERS)
 						@$(CC) $(CFLAGS) -o $@ -c $<
@@ -70,14 +70,6 @@ $(NAME) :			$(OBJ)
 clean :
 					@make -C $(LIBFT_PATH) clean
 					@make -C $(MINILIBX_PATH) clean
-						@printf "\33[2K\r$(LIGHT_RED)Deleting cub3D srcs/		\033[37m"
-						@sleep 0.1
-						@printf "\33[2K\r$(LIGHT_RED)Deleting cub3D srcs/.		\033[37m"
-						@sleep 0.1
-						@printf "\33[2K\r$(LIGHT_RED)Deleting cub3D srcs/..		\033[37m"
-						@sleep 0.1
-						@printf "\33[2K\r$(LIGHT_RED)Deleting cub3D srcs/...	\033[37m"
-						@sleep 0.1
 						@printf "\33[2K\r$(LIGHT_RED)Deleting cub3D srcs/		\033[37m"
 						@sleep 0.1
 						@printf "\33[2K\r$(LIGHT_RED)Deleting cub3D srcs/.		\033[37m"
