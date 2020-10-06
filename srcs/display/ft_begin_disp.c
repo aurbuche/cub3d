@@ -65,6 +65,7 @@ int			ft_begin_disp(t_cub *cub)
 	}
 	mlx_hook(cub->mlx_win, 02, 1L << 0, &use_key, cub);
 	mlx_hook(cub->mlx_win, 03, 1L << 1, &unused_key, cub);
+	mlx_hook(cub->mlx_win, 33, 1L << 17, &ft_close, cub);
 	mlx_loop_hook(cub->mlx_ptr, &cub_loop, cub);
 	mlx_loop(cub->mlx_ptr);
 	return (1);
