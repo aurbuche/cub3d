@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 12:17:15 by user42            #+#    #+#             */
-/*   Updated: 2020/09/22 18:34:08 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/06 13:47:31 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void		ft_movefb(t_cub *c)
 		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')
 			c->pos.y -= c->dir.y * MOVESPEED;
 	}
-	if (c->move == 'S')
+	else if (c->move == 'S')
 	{
 		c->pos.x -= c->dir.x * MOVESPEED;
 		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')
@@ -45,7 +45,7 @@ static void		ft_moverl(t_cub *c)
 		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')
 			c->pos.y -= c->plane.y * MOVESPEED;
 	}
-	if (c->move == 'A')
+	else if (c->move == 'A')
 	{
 		c->pos.x -= c->plane.x * MOVESPEED;
 		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')

@@ -6,11 +6,12 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:13:54 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/10/01 10:12:35 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/06 11:21:31 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
+
 static int			check_player(char c, t_cub *cub, size_t k, size_t j)
 {
 	if (ft_strchr("NSEW", c))

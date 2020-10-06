@@ -6,15 +6,15 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/13 09:54:33 by user42            #+#    #+#             */
-/*   Updated: 2020/08/13 09:57:41 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/06 11:26:54 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-void        ft_reset_tab(int *tab, int end)
+void		ft_reset_tab(int *tab, int end)
 {
-	int     i;
+	int		i;
 
 	i = 0;
 	while (i < end)

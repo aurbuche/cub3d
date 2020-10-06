@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/24 10:30:00 by user42            #+#    #+#             */
-/*   Updated: 2020/10/01 09:48:41 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/06 14:41:16 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static void			dda(t_cub *c)
 			c->maps.y += c->step.y;
 			c->side = 1;
 		}
-		if (c->map[(int)c->maps.x][(int)c->maps.y] == '1')
+		if (c->map[c->maps.x][c->maps.y] == '1')
 			c->ishit = 1;
 	}
 }

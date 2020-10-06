@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 16:22:46 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 10:07:30 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/06 14:43:09 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void		ft_draw_floor(t_cub *c, int x)
 
 	y = c->res[1] - 1;
 	color.color = c->color_floor;
-	while (y >= c->end_draw)
+	while (y >= c->end_draw && y > 0)
 	{
 		c->screen.img_data[y * c->res[0] + x] = color.color;
 		y--;

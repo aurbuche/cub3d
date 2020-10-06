@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 11:51:22 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/06/08 16:32:56 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/10/06 11:23:44 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef _GET_NEXT_LINE_H
 # define _GET_NEXT_LINE_H

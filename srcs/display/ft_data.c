@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 15:54:53 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 10:20:19 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/06 13:55:08 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ void			ft_data(t_cub *c)
 	if (c->start_draw < 0)
 		c->start_draw = 0;
 	c->end_draw = c->line_height / 2 + c->res[1] / 2;
-	if (c->end_draw >= c->res[1])
+	if (c->end_draw > c->res[1])
 		c->end_draw = c->res[1] - 1;
 }
