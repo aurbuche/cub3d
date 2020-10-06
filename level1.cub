@@ -2,7 +2,7 @@ R 950 600
 
 NO ./textures/eagle.xpm
 SO ./textures/south.xpm
-WE ./textures/duck.xpm
+WE ./textures/oak_planks.xpm
 EA ./textures/stone.xpm
 
 S ./textures/ruby.xpm
