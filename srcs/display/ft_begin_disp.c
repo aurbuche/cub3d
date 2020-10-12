@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 15:10:49 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/10/06 13:36:24 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/12 09:39:07 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int			unused_key(int key, t_cub *cub)
 	else if (key == K_S)
 		cub->move = 0;
 	else if (key == K_A)
-		cub->move = 0;
+		cub->movead = 0;
 	else if (key == K_D)
-		cub->move = 0;
+		cub->movead = 0;
 	else if (key == K_SPACE)
 		cub->move = 0;
 	else if (key == K_ARROW_RIGHT)
@@ -40,9 +40,9 @@ int			use_key(int key, t_cub *cub)
 	else if (key == K_S)
 		cub->move = 'S';
 	else if (key == K_A)
-		cub->move = 'A';
+		cub->movead = 'A';
 	else if (key == K_D)
-		cub->move = 'D';
+		cub->movead = 'D';
 	else if (key == K_SPACE)
 		cub->move = ' ';
 	else if (key == K_ARROW_RIGHT)

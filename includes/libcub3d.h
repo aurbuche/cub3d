@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 13:34:16 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/09/24 16:17:21 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/12 09:33:01 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ typedef struct          s_cub
 	void		*mlx_ptr;
 	void		*mlx_win;
 	char		move;
+	char		movead;
 	char		turn;
 	size_t		n_line;
 	int			n_sprite;
@@ -216,5 +217,7 @@ void            ft_draw_sprites(t_cub *c);
 void			ft_sprite_set_draw(t_cub *c);
 void			ft_next_level(t_cub *c);
 int				ft_check_color(char *line, t_cub *cub);
+void			ft_movefb(t_cub *c);
+void			ft_moverl(t_cub *c);
 
 #endif

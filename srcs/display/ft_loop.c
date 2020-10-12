@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 13:47:43 by user42            #+#    #+#             */
-/*   Updated: 2020/10/06 13:49:13 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/12 09:33:08 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int			cub_loop(t_cub *c)
 	if (c->turn && !c->end)
 		ft_turn(c);
 	if (c->move && !c->end)
-		ft_move(c);
+		ft_movefb(c);
+	if (c->movead && !c->end)
+		ft_moverl(c);
 	if (!c->end)
 		ft_raycasting(c);
 	mlx_put_image_to_window(c->mlx_ptr, c->mlx_win, c->screen.img, 0, 0);

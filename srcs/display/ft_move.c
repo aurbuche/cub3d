@@ -6,14 +6,21 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 12:17:15 by user42            #+#    #+#             */
-/*   Updated: 2020/10/06 13:47:31 by user42           ###   ########lyon.fr   */
+/*   Updated: 2020/10/12 09:38:25 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libcub3d.h"
 
-static void		ft_movefb(t_cub *c)
+void		ft_movefb(t_cub *c)
 {
+	c->maps.x = (int)c->pos.x;
+	c->maps.y = (int)c->pos.y;
+	if (c->map[(int)c->pos.x][(int)c->pos.y] == '2')
+	{
+		c->map[(int)c->pos.x][(int)c->pos.y] = '0';
+		c->n_ruby++;
+	}
 	if (c->move == 'W')
 	{
 		c->pos.x += c->dir.x * MOVESPEED;
@@ -34,9 +41,16 @@ static void		ft_movefb(t_cub *c)
 	}
 }
 
-static void		ft_moverl(t_cub *c)
+void		ft_moverl(t_cub *c)
 {
-	if (c->move == 'D')
+	c->maps.x = (int)c->pos.x;
+	c->maps.y = (int)c->pos.y;
+	if (c->map[(int)c->pos.x][(int)c->pos.y] == '2')
+	{
+		c->map[(int)c->pos.x][(int)c->pos.y] = '0';
+		c->n_ruby++;
+	}
+	if (c->movead == 'D')
 	{
 		c->pos.x += c->plane.x * MOVESPEED;
 		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')
@@ -45,7 +59,7 @@ static void		ft_moverl(t_cub *c)
 		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')
 			c->pos.y -= c->plane.y * MOVESPEED;
 	}
-	else if (c->move == 'A')
+	else if (c->movead == 'A')
 	{
 		c->pos.x -= c->plane.x * MOVESPEED;
 		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')
@@ -53,18 +67,5 @@ static void		ft_moverl(t_cub *c)
 		c->pos.y -= c->plane.y * MOVESPEED;
 		if (c->map[(int)c->pos.x][(int)c->pos.y] == '1')
 			c->pos.y += c->plane.y * MOVESPEED;
-	}
-}
-
-void			ft_move(t_cub *c)
-{
-	ft_movefb(c);
-	c->maps.x = (int)c->pos.x;
-	c->maps.y = (int)c->pos.y;
-	ft_moverl(c);
-	if (c->map[(int)c->pos.x][(int)c->pos.y] == '2')
-	{
-		c->map[(int)c->pos.x][(int)c->pos.y] = '0';
-		c->n_ruby++;
 	}
 }
